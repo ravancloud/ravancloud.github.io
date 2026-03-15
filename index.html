@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ravan Cloud - Cheap RDP & VPS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ravan Cloud - Cheap RDP</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#f4f6f8;
+background:#ffd84d;
 }
+
+/* HEADER */
 
 header{
-background:#1e7d4f;
+background:black;
 color:white;
-padding:18px;
-font-size:26px;
+padding:15px;
 text-align:center;
-font-weight:bold;
+font-size:22px;
 }
 
-nav{
-background:#145a38;
-padding:12px;
-text-align:center;
-}
-
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.hero{
-text-align:center;
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.btn{
-background:#1e7d4f;
-color:white;
-padding:12px 25px;
-border-radius:6px;
-text-decoration:none;
-display:inline-block;
-margin:10px;
-font-weight:bold;
-}
-
-.section{
-padding:40px 20px;
-text-align:center;
-}
+/* PLANS */
 
 .plans{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+padding:20px;
+text-align:center;
 }
 
-.card{
+.planbox{
+background:black;
+color:white;
+padding:20px;
+margin:20px;
+border-radius:10px;
+}
+
+.price{
+font-size:20px;
+margin:10px;
+}
+
+/* BUTTON */
+
+.btn{
+background:green;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* POPUP */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.popup-content{
 background:white;
-width:260px;
-margin:15px;
+width:90%;
+max-width:400px;
+margin:120px auto;
 padding:25px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+text-align:center;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.tg{
+display:block;
+background:green;
+color:white;
+padding:12px;
+margin:10px;
+text-decoration:none;
+border-radius:6px;
 }
 
-.card h3{
-margin-top:0;
-}
-
-.review{
-background:white;
-width:300px;
-margin:15px;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
+/* FOOTER */
 
 footer{
-background:#1e7d4f;
+background:black;
 color:white;
 text-align:center;
-padding:25px;
-margin-top:40px;
+padding:15px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -109,355 +105,69 @@ margin-top:40px;
 Ravan Cloud
 </header>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">RDP Plans</a>
-<a href="#">Contact</a>
-</nav>
-
-<div class="hero">
-
-<h1>Cheap Windows RDP & VPS Provider</h1>
-
-<p>Fast • Secure • Affordable Cloud Servers</p>
-
-<a class="btn" href="https://t.me/Alvida_my_love">Buy RDP</a>
-<a class="btn" href="https://t.me/Alvida_my_love">Contact Telegram</a>
-
-</div>
-
-<div class="section">
-
-<h2>Why Choose Ravan Cloud</h2>
-
-<p>⚡ Instant Setup</p>
-<p>🔒 Secure Login</p>
-<p>🖥 Full Admin Access</p>
-<p>📡 24/7 Uptime Servers</p>
-
-</div>
-
-<div class="section">
+<div class="plans">
 
 <h2>RDP / VPS Plans</h2>
 
-<div class="plans">
-
-<div class="card">
-<h3>2GB RAM</h3>
-<p>1 vCPU</p>
-<p>$3 / 20days garrunty 30 Days Validity</p>
-<button class="btn" onclick="openPopup()">Buy Now</button>
-  </footer>
-
-<!-- BUY BUTTON -->
-<button class="btn" onclick="openPopup()">Buy Now</button>
-
-<!-- POPUP BOX -->
-<div id="popupBox" class="popup">
-<div class="popup-content">
-
-<h2>🙏 Welcome to Ravan Cloud</h2>
-
-<p>
-Ravan Cloud पर आने के लिए धन्यवाद!  
-हमें सेवा करने का अवसर देने के लिए धन्यवाद।  
-हम आपकी सेवा में 24/7 उपस्थित हैं।
-</p>
-
-<p>
-Thank you for visiting Ravan Cloud!  
-We appreciate the opportunity to serve you.  
-Our support team is available 24/7.
-</p>
-
-<a href="https://t.me/Ravancloud_bot?start=order" class="tgbtn">
-🤖 Telegram Bot
-</a>
-
-<a href="https://t.me/alvida_my_love" class="tgbtn">
-💬 Personal Telegram
-</a>
-
-<br>
-
-<button onclick="closePopup()" class="closebtn">Close</button>
-
-</div>
-</div>
-  
- <script>
-
-function openPopup(){
-document.getElementById("popupBox").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("popupBox").style.display="none";
-}
-
-</script>
-
-</body>
-  </html> 
-  
-<div class="card">
+<div class="planbox">
 <h3>4GB RAM</h3>
 <p>2 vCPU</p>
-<p>$5 / 20days garrunty 30 Days Validity</p>
+<p class="price">$5 / 30 Days</p>
 <button class="btn" onclick="openPopup()">Buy Now</button>
-</footer>
-
-<!-- BUY BUTTON -->
-<button class="btn" onclick="openPopup()">Buy Now</button>
-
-<!-- POPUP BOX -->
-<div id="popupBox" class="popup">
-<div class="popup-content">
-
-<h2>🙏 Welcome to Ravan Cloud</h2>
-
-<p>
-Ravan Cloud पर आने के लिए धन्यवाद!  
-हमें सेवा करने का अवसर देने के लिए धन्यवाद।  
-हम आपकी सेवा में 24/7 उपस्थित हैं।
-</p>
-
-<p>
-Thank you for visiting Ravan Cloud!  
-We appreciate the opportunity to serve you.  
-Our support team is available 24/7.
-</p>
-
-<a href="https://t.me/Ravancloud_bot?start=order" class="tgbtn">
-🤖 Telegram Bot
-</a>
-
-<a href="https://t.me/alvida_my_love" class="tgbtn">
-💬 Personal Telegram
-</a>
-
-<br>
-
-<button onclick="closePopup()" class="closebtn">Close</button>
-
-</div>
 </div>
 
-  <script>
-
-function openPopup(){
-document.getElementById("popupBox").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("popupBox").style.display="none";
-}
-
-</script>
-
-</body>
-</html>
-  
-<div class="card">
+<div class="planbox">
 <h3>8GB RAM</h3>
 <p>4 vCPU</p>
-<p>$8 / 20days garrunty 30 Days Validity</p>
+<p class="price">$8 / 30 Days</p>
 <button class="btn" onclick="openPopup()">Buy Now</button>
-
-</footer>
-
-<!-- BUY BUTTON -->
-<button class="btn" onclick="openPopup()">Buy Now</button>
-
-<!-- POPUP BOX -->
-<div id="popupBox" class="popup">
-<div class="popup-content">
-
-<h2>🙏 Welcome to Ravan Cloud</h2>
-
-<p>
-Ravan Cloud पर आने के लिए धन्यवाद!  
-हमें सेवा करने का अवसर देने के लिए धन्यवाद।  
-हम आपकी सेवा में 24/7 उपस्थित हैं।
-</p>
-
-<p>
-Thank you for visiting Ravan Cloud!  
-We appreciate the opportunity to serve you.  
-Our support team is available 24/7.
-</p>
-
-<a href="https://t.me/Ravancloud_bot?start=order" class="tgbtn">
-🤖 Telegram Bot
-</a>
-
-<a href="https://t.me/alvida_my_love" class="tgbtn">
-💬 Personal Telegram
-</a>
-
-<br>
-
-<button onclick="closePopup()" class="closebtn">Close</button>
-
 </div>
-</div>
-  <script>
 
-function openPopup(){
-document.getElementById("popupBox").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("popupBox").style.display="none";
-}
-
-</script>
-
-</body>
-</html>
-
-  
-<div class="card">
+<div class="planbox">
 <h3>16GB RAM</h3>
-<p>4 vCPU</p>
-<p>$15 / 20days garrunty 30 Days Validity</p>
+<p>6 vCPU</p>
+<p class="price">$15 / 30 Days</p>
 <button class="btn" onclick="openPopup()">Buy Now</button>
-</footer>
-
-<!-- BUY BUTTON -->
-<button class="btn" onclick="openPopup()">Buy Now</button>
-
-<!-- POPUP BOX -->
-<div id="popupBox" class="popup">
-<div class="popup-content">
-
-<h2>🙏 Welcome to Ravan Cloud</h2>
-
-<p>
-Ravan Cloud पर आने के लिए धन्यवाद!  
-हमें सेवा करने का अवसर देने के लिए धन्यवाद।  
-हम आपकी सेवा में 24/7 उपस्थित हैं।
-</p>
-
-<p>
-Thank you for visiting Ravan Cloud!  
-We appreciate the opportunity to serve you.  
-Our support team is available 24/7.
-</p>
-
-<a href="https://t.me/Ravancloud_bot?start=order" class="tgbtn">
-🤖 Telegram Bot
-</a>
-
-<a href="https://t.me/alvida_my_love" class="tgbtn">
-💬 Personal Telegram
-</a>
-
-<br>
-
-<button onclick="closePopup()" class="closebtn">Close</button>
-
 </div>
-</div>
-  <script>
 
-function openPopup(){
-document.getElementById("popupBox").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("popupBox").style.display="none";
-}
-
-</script>
-
-</body>
-</html>
-  
-<div class="card">
+<div class="planbox">
 <h3>32GB RAM</h3>
 <p>8 vCPU</p>
-<p>$27 / 20days garrunty 30 Days Validity</p>
+<p class="price">$27 / 30 Days</p>
 <button class="btn" onclick="openPopup()">Buy Now</button>
-</footer>
+</div>
 
-<!-- BUY BUTTON -->
-<button class="btn" onclick="openPopup()">Buy Now</button>
+</div>
 
-<!-- POPUP BOX -->
+<!-- POPUP -->
+
 <div id="popupBox" class="popup">
+
 <div class="popup-content">
 
 <h2>🙏 Welcome to Ravan Cloud</h2>
 
 <p>
 Ravan Cloud पर आने के लिए धन्यवाद!  
-हमें सेवा करने का अवसर देने के लिए धन्यवाद।  
-हम आपकी सेवा में 24/7 उपस्थित हैं।
+हम आपकी सेवा में 24/7 उपलब्ध हैं।
 </p>
 
 <p>
-Thank you for visiting Ravan Cloud!  
-We appreciate the opportunity to serve you.  
-Our support team is available 24/7.
+Thank you for visiting Ravan Cloud.  
+We are available 24/7 to help you.
 </p>
 
-<a href="https://t.me/Ravancloud_bot?start=order" class="tgbtn">
-🤖 Telegram Bot
+<a class="tg" href="https://t.me/Ravancloud_bot">
+Telegram Bot
 </a>
 
-<a href="https://t.me/alvida_my_love" class="tgbtn">
-💬 Personal Telegram
+<a class="tg" href="https://t.me/alvida_my_love">
+Personal Telegram
 </a>
 
 <br>
 
-<button onclick="closePopup()" class="closebtn">Close</button>
-
-</div>
-</div>
-  <script>
-
-function openPopup(){
-document.getElementById("popupBox").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("popupBox").style.display="none";
-}
-
-</script>
-
-</body>
-</html>
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Customer Reviews</h2>
-
-<div class="plans">
-
-<div class="review">
-⭐⭐⭐⭐⭐  
-Very fast Windows RDP server and instant setup.  
-<b>Rahul</b>
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐  
-Best live streaming server.  
-<b>Amit</b>
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐  
-Affordable and stable RDP performance.  
-<b>Sachin</b>
-</div>
+<button class="btn" onclick="closePopup()">Close</button>
 
 </div>
 
@@ -466,10 +176,21 @@ Affordable and stable RDP performance.
 <footer>
 
 © 2026 Ravan Cloud  
-<br>
-Telegram: @Alvida_my_love
+Telegram: @alvida_my_love
 
 </footer>
 
+<script>
+
+function openPopup(){
+document.getElementById("popupBox").style.display="block";
+}
+
+function closePopup(){
+document.getElementById("popupBox").style.display="none";
+}
+
+</script>
+
 </body>
-  </html>
+</html>
