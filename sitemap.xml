@@ -6,7 +6,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://ravancloud.github.io/</loc>
   <lastmod>2026-03-17T02:21:20+00:00</lastmod>
@@ -14,6 +13,11 @@
 </url>
 <url>
   <loc>https://ravancloud.github.io/index.html</loc>
+  <lastmod>2026-03-17T02:21:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ravancloud.github.io/locations.html</loc>
   <lastmod>2026-03-17T02:21:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -27,6 +31,5 @@
   <lastmod>2026-03-17T02:21:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>

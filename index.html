@@ -1,532 +1,4136 @@
-</style>
-
-</head>
-
-<body>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
-<div class="navbar">
-  <div class="pricing-container">
-        <div class="card">
-            <h2>     Ravan Cloud      </h2>
-  <div class="menu">
-    <nav style="background: #1a8e1a !important; padding: 15px !important; text-align: center !important; display: block !important;">
-    <a href="index.html" style="color: white !important; text-decoration: none !important; margin: 0 10px !important; font-size: 16px !important; font-weight: bold !important; display: inline-block !important;">Home</a>
-  <a href="live.html" style="color: white !important; text-decoration: none !important; margin: 0 10px !important; font-size: 16px !important; font-weight: bold !important; display: inline-block !important;">Live</a>
-    <a href="about.html" style="color: white !important; text-decoration: none !important; margin: 0 10px !important; font-size: 16px !important; font-weight: bold !important; display: inline-block !important;">about</a>
+  <!-- Primary Meta Tags -->
+  <title>Ravan Cloud | Fast Budget Windows RDP & Linux VPS Hosting from $4/mo</title>
+  <meta name="title" content="Ravan Cloud | Fast Budget Windows RDP & Linux VPS Hosting from $4/mo">
+  <meta name="description" content="Deploy high-performance Windows RDP & Linux VPS in 60 seconds. Pure NVMe storage, 99.9% uptime target, Windows Server 2016/19/2022 & Ubuntu, ideal for MT4/MT5 trading bots and developers.">
+  <meta name="keywords" content="Windows RDP, cheap VPS, budget RDP hosting, MT4 VPS, MT5 trading server, Windows Server 2022, Linux VPS, Ravan Cloud, remote desktop">
+  <meta name="author" content="Ravan Cloud">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ravancloud.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ravancloud.github.io/">
+  <meta property="og:title" content="Ravan Cloud | High-Performance Budget RDP & VPS">
+  <meta property="og:description" content="Windows RDP & VPS that just stays online. NVMe SSDs, 99.9% uptime target, instant deployment from $4/mo.">
+  <meta property="og:image" content="https://ravancloud.github.io/IMG_20260316_121023_213.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ravancloud.github.io/">
+  <meta property="twitter:title" content="Ravan Cloud | Fast Windows RDP & Linux VPS Hosting">
+  <meta property="twitter:description" content="Windows RDP & VPS that just stays online. Servers from $4/mo with Windows Server 2016/19/2022 & Ubuntu.">
+  <meta property="twitter:image" content="https://ravancloud.github.io/IMG_20260316_121023_213.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230E0F0C'/><path d='M25 65 L45 30 L55 48 L75 35' stroke='%23C6FF3D' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='75' cy='35' r='5' fill='%23C6FF3D'/></svg>">
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Libraries from CDNJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ravancloud.github.io/#organization",
+        "name": "Ravan Cloud",
+        "url": "https://ravancloud.github.io/",
+        "logo": "https://ravancloud.github.io/IMG_20260316_121023_213.jpg",
+        "description": "Budget Windows RDP and Linux VPS hosting with 99.9% uptime target and instant setup.",
+        "sameAs": [
+          "https://t.me/Ravancloud_bot",
+          "https://t.me/alvida_my_love"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ravancloud.github.io/#website",
+        "url": "https://ravancloud.github.io/",
+        "name": "Ravan Cloud",
+        "publisher": { "@id": "https://ravancloud.github.io/#organization" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Ravan Cloud RDP & VPS Hosting Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "name": "Starter Plan",
+            "price": "4.00",
+            "priceCurrency": "USD",
+            "description": "1 vCPU, 2 GB RAM, 40 GB NVMe SSD, Windows Server / Ubuntu Linux"
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "name": "Basic Plan",
+            "price": "6.00",
+            "priceCurrency": "USD",
+            "description": "2 vCPU, 4 GB RAM, 80 GB NVMe SSD, Windows Server / Ubuntu Linux"
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "name": "Standard Plan",
+            "price": "11.00",
+            "priceCurrency": "USD",
+            "description": "4 vCPU, 8 GB RAM, 160 GB NVMe SSD, Most Popular for MT4/MT5 Trading"
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "name": "Performance Plan",
+            "price": "20.00",
+            "priceCurrency": "USD",
+            "description": "8 vCPU, 16 GB RAM, 240 GB NVMe SSD, Heavy Workloads"
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "name": "Pro Plan",
+            "price": "35.00",
+            "priceCurrency": "USD",
+            "description": "16 vCPU, 32 GB RAM, 480 GB NVMe SSD, Team Remote Office"
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "name": "Ultimate Plan",
+            "price": "50.00",
+            "priceCurrency": "USD",
+            "description": "16 vCPU, 64 GB RAM, 960 GB NVMe SSD, Enterprise Workloads"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* 1. DESIGN TOKENS & CSS VARIABLES */
+    :root {
+      /* Dark Theme (Default) */
+      --bg: #0E0F0C;
+      --surface: #161814;
+      --surface-elevated: #1E201A;
+      --surface-glass: rgba(22, 24, 20, 0.72);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.2);
+      --border-accent: rgba(198, 255, 61, 0.35);
       
-    </nav>
-    
-  </div>
-</div>
-  
-<header>
+      --text: #F2F1EA;
+      --text-muted: #8C8F85;
+      --text-dim: #54574E;
+      
+      /* Single Accent: Electric Lime */
+      --accent: #C6FF3D;
+      --accent-hover: #D4FF66;
+      --accent-contrast: #0E0F0C;
+      --accent-rgb: 198, 255, 61;
+      
+      --status-green: #C6FF3D;
+      --status-glow: rgba(198, 255, 61, 0.3);
+      --grid-line: rgba(255, 255, 255, 0.032);
+      
+      /* Typography */
+      --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      /* Motion Tokens */
+      --ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-transition: cubic-bezier(0.65, 0, 0.35, 1);
+      --duration-micro: 150ms;
+      --duration-ui: 350ms;
+      --duration-section: 700ms;
+      
+      /* Spacing Grid */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-24: 96px;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+    }
 
-<style>
-    /* Sabse upar ka main section jisme pic aur text hai */
-    .hero-container-new {
-        background: #000; /* Black background pic ke sath match karega */
+    [data-theme="light"] {
+      --bg: #F6F5EF;
+      --surface: #FFFFFF;
+      --surface-elevated: #EDECE5;
+      --surface-glass: rgba(255, 255, 255, 0.82);
+      --border: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(0, 0, 0, 0.22);
+      --border-accent: rgba(105, 150, 0, 0.4);
+      
+      --text: #11120F;
+      --text-muted: #64685D;
+      --text-dim: #9FA296;
+      
+      --accent: #6C9E00;
+      --accent-hover: #5B8500;
+      --accent-contrast: #FFFFFF;
+      --accent-rgb: 108, 158, 0;
+      
+      --status-green: #6C9E00;
+      --status-glow: rgba(108, 158, 0, 0.25);
+      --grid-line: rgba(0, 0, 0, 0.04);
+    }
+
+    /* 2. RESET & BASE STYLES */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      transition: background-color var(--duration-ui) var(--ease-transition),
+                  color var(--duration-ui) var(--ease-transition);
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--accent-contrast);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    /* Focus Rings for Accessibility */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Subtle 1px Grid & Noise Background (NO gradient blobs) */
+    .bg-grid-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(var(--accent-rgb), 0.035) 0%, transparent 70%),
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    .bg-noise-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Scroll progress bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--accent);
+      z-index: 1000;
+      transition: width 0.05s linear;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-6);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Typography Utilities */
+    .font-heading { font-family: var(--font-heading); }
+    .font-mono { font-family: var(--font-mono); }
+
+    /* 3. CUSTOM CURSOR (Desktop only) */
+    #cursor-dot, #cursor-ring {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.2s ease, width 0.25s var(--ease-entrance), height 0.25s var(--ease-entrance), background 0.25s ease;
+    }
+
+    #cursor-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+    }
+
+    #cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(var(--accent-rgb), 0.5);
+      background: transparent;
+    }
+
+    body.cursor-hover #cursor-ring {
+      width: 52px;
+      height: 52px;
+      background: rgba(var(--accent-rgb), 0.08);
+      border-color: var(--accent);
+    }
+
+    @media (pointer: coarse) or (hover: none) {
+      #cursor-dot, #cursor-ring { display: none !important; }
+    }
+
+    /* 4. NAVBAR (Sticky Floating Pill) */
+    .header-wrap {
+      position: fixed;
+      top: var(--space-4);
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      padding: 0 var(--space-4);
+      transition: transform var(--duration-ui) var(--ease-entrance);
+    }
+
+    .header-wrap.nav-hidden {
+      transform: translateY(-120%);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      width: 100%;
+      max-width: 980px;
+      padding: 8px 14px 8px 16px;
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: background var(--duration-ui) ease, border-color var(--duration-ui) ease, box-shadow var(--duration-ui) ease;
+    }
+
+    .header-wrap.scrolled .navbar {
+      background: var(--surface-elevated);
+      border-color: var(--border-hover);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Fallback for browsers without backdrop-filter */
+    @supports not (backdrop-filter: blur(16px)) {
+      .navbar { background: var(--surface-elevated); }
+    }
+
+    /* Brand Logo */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      display: block;
+      background: #000;
+    }
+
+    .brand-text {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--status-green);
+      box-shadow: 0 0 8px var(--status-glow);
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    /* Nav Links with Shared Highlight Pill */
+    .nav-links-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-pill-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-radius: var(--radius-pill);
+      background: rgba(var(--accent-rgb), 0.1);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      pointer-events: none;
+      opacity: 0;
+      transition: all var(--duration-micro) var(--ease-entrance);
+    }
+
+    .nav-link {
+      padding: 6px 14px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      transition: color var(--duration-micro) ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text);
+    }
+
+    /* Nav Actions */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      transition: color var(--duration-micro) ease, border-color var(--duration-micro) ease, transform 0.4s var(--ease-entrance);
+    }
+
+    .theme-toggle:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+      transform: rotate(180deg);
+    }
+
+    .theme-toggle svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Mobile Hamburger */
+    .mobile-menu-btn {
+      display: none;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .mobile-menu-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Mobile Glass Drawer */
+    .mobile-drawer {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--space-8);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.4s var(--ease-entrance), opacity 0.3s ease, visibility 0.4s;
+    }
+
+    .mobile-drawer.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .mobile-nav-list li {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.3s var(--ease-entrance), opacity 0.3s ease;
+    }
+
+    .mobile-drawer.open .mobile-nav-list li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-contact-links {
+      margin-top: var(--space-12);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    /* 5. BUTTONS & MICROINTERACTIONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--duration-micro) var(--ease-entrance),
+                  box-shadow var(--duration-ui) ease,
+                  background var(--duration-micro) ease;
+      white-space: nowrap;
+    }
+
+    .btn:active {
+      transform: scale(0.97) !important;
+    }
+
+    /* Light sweep across button surface */
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: rotate(25deg);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .btn:hover::after {
+      opacity: 1;
+      transform: rotate(25deg) translate(400%, 0);
+    }
+
+    /* Accent Button (Electric Lime) */
+    .btn-accent {
+      background: var(--accent);
+      color: var(--accent-contrast);
+      border: 1px solid var(--accent);
+      font-weight: 700;
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.35);
+    }
+
+    /* Ghost Button */
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      background: var(--surface-elevated);
+      border-color: var(--border-hover);
+    }
+
+    .btn-arrow {
+      transition: transform var(--duration-micro) var(--ease-entrance);
+    }
+
+    .btn:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Loading Spinner for Buy Form */
+    .spinner {
+      width: 14px;
+      height: 14px;
+      border: 2px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      display: none;
+    }
+
+    .btn.loading .spinner { display: inline-block; }
+    .btn.loading .btn-text, .btn.loading .btn-arrow { display: none; }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* 6. HERO SECTION */
+    .hero-section {
+      padding-top: calc(var(--space-24) + var(--space-8));
+      padding-bottom: var(--space-16);
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: var(--space-4);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    /* Headline with mask line reveal */
+    .hero-title-mask {
+      overflow: hidden;
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      color: var(--text);
+    }
+
+    .hero-title .highlight {
+      color: var(--accent);
+      position: relative;
+    }
+
+    .hero-subline {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.5;
+      margin-bottom: var(--space-8);
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-12);
+    }
+
+    .hero-ctas .btn {
+      padding: 12px 26px;
+      font-size: 0.95rem;
+    }
+
+    /* Trust Row */
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-6);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--border);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .trust-item strong {
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .trust-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--status-green);
+      box-shadow: 0 0 8px var(--status-glow);
+    }
+
+    /* 7. HERO LIVE SERVER PANEL (Restrained Glass Terminal) */
+    .hero-panel-card {
+      background: var(--surface-glass);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: border-color var(--duration-ui) ease, box-shadow var(--duration-ui) ease;
+    }
+
+    .hero-panel-card:hover {
+      border-color: var(--border-hover);
+    }
+
+    /* Terminal Header */
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ctrl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .ctrl-red { background: #FF5F56; }
+    .ctrl-yellow { background: #FFBD2E; }
+    .ctrl-green { background: #27C93F; }
+
+    .panel-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .panel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(var(--accent-rgb), 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+    }
+
+    /* Metrics Bar */
+    .panel-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .metric-cell {
+      background: var(--surface);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    .metric-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .metric-val.accent {
+      color: var(--accent);
+    }
+
+    /* Terminal Body */
+    .panel-terminal {
+      padding: 18px 20px;
+      background: rgba(10, 11, 8, 0.85);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.7;
+      min-height: 190px;
+    }
+
+    .term-line {
+      display: flex;
+      gap: 8px;
+      color: var(--text-muted);
+      white-space: pre-wrap;
+    }
+
+    .term-prompt {
+      color: var(--accent);
+      user-select: none;
+    }
+
+    .term-ok {
+      color: var(--status-green);
+      font-weight: 600;
+    }
+
+    .term-cursor {
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      background: var(--accent);
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 0.9s infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    /* 8. SOCIAL PROOF STRIP (Animated Counter Numbers) */
+    .stats-strip {
+      padding: var(--space-8) 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+
+    .stat-item {
+      padding: var(--space-4) 0;
+      border-left: 1px solid var(--border);
+      padding-left: var(--space-6);
+    }
+
+    .stat-item:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .stat-number {
+      font-family: var(--font-mono);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+      letter-spacing: -0.03em;
+    }
+
+    .stat-number .unit {
+      color: var(--accent);
+    }
+
+    .stat-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* 9. PRICING SECTION */
+    .section-pricing {
+      padding: var(--space-24) 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto var(--space-12);
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-2);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--space-3);
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Use-Case Filter Chips Row */
+    .filter-chips-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .filter-chips {
+      display: inline-flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 4px;
+      position: relative;
+      gap: 2px;
+      max-width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .filter-chips::-webkit-scrollbar { display: none; }
+
+    .chip-indicator {
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: 4px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-pill);
+      pointer-events: none;
+      transition: all var(--duration-ui) var(--ease-entrance);
+      z-index: 1;
+    }
+
+    .chip-btn {
+      padding: 7px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      position: relative;
+      z-index: 2;
+      transition: color var(--duration-micro) ease;
+      white-space: nowrap;
+    }
+
+    .chip-btn.active {
+      color: var(--text);
+    }
+
+    /* Pricing Grid (Desktop 3 columns x 2 rows) */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    /* Pricing Card */
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--duration-ui) var(--ease-entrance),
+                  border-color var(--duration-ui) ease,
+                  box-shadow var(--duration-ui) ease,
+                  opacity var(--duration-ui) ease;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    /* 3D Tilt Spotlight variables */
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.15), transparent 70%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .pricing-card:hover::before {
+      opacity: 1;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Featured Glass Card ($11 Standard Plan) */
+    .pricing-card.featured {
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid var(--border-accent);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .pricing-card.featured::before {
+      background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.4), transparent 70%);
+      opacity: 1;
+    }
+
+    /* Filter highlight / dim state */
+    .pricing-card.highlighted {
+      border-color: var(--accent);
+      box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.15);
+      transform: translateY(-4px);
+    }
+
+    .pricing-card.dimmed {
+      opacity: 0.45;
+    }
+
+    /* Card Top Elements */
+    .card-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-4);
+      min-height: 24px;
+    }
+
+    .plan-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: var(--surface-elevated);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .plan-badge-popular {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      color: var(--accent-contrast);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .card-plan-name {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .card-plan-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: var(--space-6);
+      min-height: 40px;
+    }
+
+    /* Price Big Numerals with Odometer */
+    .card-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      font-family: var(--font-mono);
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-6);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .price-currency {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .price-num {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .featured .price-num {
+      color: var(--accent);
+    }
+
+    .price-period {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* Spec List */
+    .card-specs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-bottom: var(--space-8);
+    }
+
+    .spec-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: 0.88rem;
+      color: var(--text);
+      transition: transform var(--duration-micro) ease;
+    }
+
+    .pricing-card:hover .spec-item {
+      transform: translateX(3px);
+    }
+
+    .spec-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: var(--accent);
+      stroke-width: 2.2;
+    }
+
+    .spec-text-muted {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* Uptime pill in card */
+    .uptime-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--status-green);
+      margin-bottom: var(--space-4);
+    }
+
+    .card-cta-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 0.92rem;
+    }
+
+    /* Mobile Carousel Snap & Dots */
+    .pricing-dots {
+      display: none;
+      justify-content: center;
+      gap: 8px;
+      margin-top: var(--space-6);
+    }
+
+    .p-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background var(--duration-micro) ease, width var(--duration-micro) ease;
+    }
+
+    .p-dot.active {
+      width: 24px;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+    }
+
+    /* 10. "WHY RAVAN CLOUD" BENTO GRID */
+    .section-bento {
+      padding: var(--space-24) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .bento-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 240px;
+      transition: border-color var(--duration-ui) ease, box-shadow var(--duration-ui) ease, transform var(--duration-micro) ease;
+    }
+
+    .bento-card.span-2 {
+      grid-column: span 2;
+    }
+
+    .bento-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .bento-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: var(--space-6);
+      transition: transform var(--duration-micro) var(--ease-entrance), background var(--duration-micro) ease;
+    }
+
+    .bento-card:hover .bento-icon-wrap {
+      transform: scale(1.1) rotate(-4deg);
+      background: rgba(var(--accent-rgb), 0.12);
+    }
+
+    .bento-icon-wrap svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 2;
+    }
+
+    .bento-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+
+    .bento-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .bento-metric-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-top: var(--space-4);
+    }
+
+    /* 11. HOW IT WORKS (3 Steps with Connecting Line) */
+    .section-steps {
+      padding: var(--space-24) 0;
+      border-top: 1px solid var(--border);
+      position: relative;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      position: relative;
+    }
+
+    /* Scroll-drawn connecting line */
+    .steps-connect-line {
+      position: absolute;
+      top: 36px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--border);
+      z-index: 1;
+    }
+
+    .steps-connect-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .step-card {
+      position: relative;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .step-num-pill {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--space-6);
+      transition: all var(--duration-micro) var(--ease-entrance);
+    }
+
+    .step-card:hover .step-num-pill {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--accent-contrast);
+      transform: translateY(-2px);
+    }
+
+    .step-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+
+    .step-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    /* 12. ABOUT SECTION (Clean English + Hindi/Hinglish Toggle) */
+    .section-about {
+      padding: var(--space-24) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-12);
+      position: relative;
+    }
+
+    .about-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-8);
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .lang-toggle-wrap {
+      display: inline-flex;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 3px;
+    }
+
+    .lang-btn {
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      color: var(--text-muted);
+      transition: all var(--duration-micro) ease;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: var(--accent-contrast);
+      font-weight: 700;
+    }
+
+    .about-content-box {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: var(--space-8);
+      max-width: 900px;
+    }
+
+    .about-content-box p {
+      margin-bottom: var(--space-4);
+    }
+
+    /* Telegram Customization Notice Banner */
+    .notice-banner {
+      background: rgba(var(--accent-rgb), 0.06);
+      border: 1px solid rgba(var(--accent-rgb), 0.25);
+      border-radius: var(--radius-md);
+      padding: var(--space-4) var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .notice-text {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .notice-icon {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* 13. FAQ ACCORDION */
+    .section-faq {
+      padding: var(--space-24) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color var(--duration-ui) ease;
+    }
+
+    .faq-item.open {
+      border-color: var(--border-hover);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      text-align: left;
+      padding: var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .faq-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform var(--duration-ui) var(--ease-entrance), color var(--duration-ui) ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+      color: var(--accent);
+    }
+
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--duration-ui) var(--ease-entrance);
+    }
+
+    .faq-content {
+      padding: 0 var(--space-6) var(--space-6);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* 14. FINAL CTA BANNER & FOOTER */
+    .section-cta-banner {
+      padding: var(--space-24) 0;
+    }
+
+    .cta-banner-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-16) var(--space-8);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+    }
+
+    .cta-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 700;
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.03em;
+    }
+
+    .cta-desc {
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto var(--space-8);
+      font-size: 1.05rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: var(--space-16) 0 var(--space-8);
+      background: var(--bg);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--space-8);
+      margin-bottom: var(--space-12);
+    }
+
+    .footer-brand-desc {
+      margin-top: var(--space-3);
+      max-width: 320px;
+      line-height: 1.5;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--text);
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-4);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .status-indicator-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--status-green);
+    }
+
+    /* 15. TELEGRAM CONTACT MODAL (Glass with Focus Trap) */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: var(--surface-glass);
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      transform: scale(0.95) translateY(10px);
+      transition: transform 0.3s var(--ease-entrance);
+      position: relative;
+    }
+
+    .modal-backdrop.open .modal-card {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      transition: all var(--duration-micro) ease;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+      background: var(--surface-elevated);
+    }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+
+    .modal-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-6);
+    }
+
+    .modal-contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+
+    .tg-option-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      transition: border-color var(--duration-micro) ease;
+    }
+
+    .tg-option-card:hover {
+      border-color: var(--border-hover);
+    }
+
+    .tg-info {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .tg-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 136, 204, 0.15);
+      color: #0088cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tg-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .tg-handle {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .tg-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .copy-btn {
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      transition: all var(--duration-micro) ease;
+    }
+
+    .copy-btn:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+    }
+
+    .copy-btn.copied {
+      color: var(--status-green);
+      border-color: var(--status-green);
+    }
+
+    .modal-notice {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-4);
+      line-height: 1.5;
+    }
+
+    /* Smooth Page Dissolve Transition */
+    body {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.18s cubic-bezier(0.22, 1, 0.36, 1), transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    body.page-leaving {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+
+    /* 16. RESPONSIVE BREAKPOINTS (Mobile-First UX Optimization) */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bento-card.span-2 {
+        grid-column: span 1;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-wrap {
+        top: 8px;
+        padding: 0 10px;
+      }
+      .navbar {
+        padding: 6px 12px;
+      }
+      .brand-text {
+        font-size: 0.95rem;
+      }
+      .nav-links-wrap, .header-cta {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: flex;
+        width: 38px;
+        height: 38px;
+      }
+      .theme-toggle {
+        width: 38px;
+        height: 38px;
+      }
+
+      /* Hero Section on Mobile */
+      .hero-section {
+        padding-top: 84px;
+        padding-bottom: 32px;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .hero-title {
+        font-size: clamp(1.85rem, 8vw, 2.35rem);
+        line-height: 1.15;
+      }
+      .hero-subline {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+      }
+      .hero-ctas {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+        padding: 13px 20px;
+        font-size: 0.95rem;
+        justify-content: center;
+      }
+      .hero-trust-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding-top: 16px;
+      }
+      .trust-item {
+        font-size: 0.8rem;
+      }
+
+      /* Panel Metrics Grid: 2 columns on mobile */
+      .panel-metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .metric-cell {
+        padding: 10px 12px;
+      }
+      .panel-terminal {
+        min-height: 140px;
+        padding: 14px 16px;
+        font-size: 0.76rem;
+      }
+
+      /* Stats strip */
+      .stats-strip {
+        padding: 24px 0;
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .stat-item {
+        border-left: none;
+        padding: 0;
+      }
+      .stat-number {
+        font-size: 1.85rem;
+      }
+
+      /* Sections padding */
+      .section-pricing, .section-bento, .section-steps, .section-about, .section-faq, .section-cta-banner {
+        padding: 48px 0;
+      }
+
+      /* Mobile Pricing Carousel with Touch Snap */
+      .filter-chips {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding: 3px;
+      }
+      .chip-btn {
+        padding: 6px 14px;
+        font-size: 0.78rem;
+      }
+
+      .pricing-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 14px;
+        padding: 6px 12px 16px 12px;
+        margin: 0 -16px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .pricing-grid::-webkit-scrollbar { display: none; }
+      
+      .pricing-card {
+        flex: 0 0 min(86vw, 320px);
+        max-width: 320px;
+        scroll-snap-align: center;
+        padding: 20px 18px;
+      }
+      .card-price-row {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+      }
+      .price-num {
+        font-size: 2.5rem;
+      }
+      .card-specs {
+        margin-bottom: 20px;
+        gap: 8px;
+      }
+      
+      .pricing-dots {
+        display: flex;
+      }
+
+      /* Mobile Swipe / List View Switcher */
+      .mobile-pricing-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .pricing-toggle-btn {
+        padding: 5px 14px;
+        border-radius: var(--radius-pill);
+        background: var(--surface-elevated);
+        border: 1px solid var(--border);
+        font-family: var(--font-mono);
+        font-size: 0.74rem;
+        color: var(--text-muted);
+        transition: all 0.2s ease;
+      }
+      .pricing-toggle-btn.active {
+        background: var(--accent);
+        color: var(--accent-contrast);
+        font-weight: 700;
+        border-color: var(--accent);
+      }
+      .pricing-grid.list-view {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        overflow-x: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 16px !important;
+      }
+      .pricing-grid.list-view .pricing-card {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .steps-connect-line {
+        display: none;
+      }
+      .step-num-pill {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+
+      .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .bento-card {
+        min-height: auto;
+        padding: 22px;
+      }
+
+      .about-card {
+        padding: 22px;
+      }
+      .about-content-box {
+        font-size: 0.95rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .notice-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cta-banner-card {
+        padding: 36px 20px;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Mobile Bottom Dock (App-Like 1-Tap Thumb Navigation) */
+      body {
+        padding-bottom: 74px;
+      }
+      .mobile-bottom-dock {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 10px;
+        left: 12px;
+        right: 12px;
+        max-width: 420px;
+        margin: 0 auto;
+        height: 56px;
+        background: rgba(22, 24, 20, 0.92);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border: 1px solid var(--border-hover);
+        border-radius: var(--radius-pill);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
+        z-index: 95;
+        padding: 0 6px;
+        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+      }
+      .mobile-bottom-dock.dock-hidden {
+        transform: translateY(130%);
+        opacity: 0;
+        pointer-events: none;
+      }
+      .dock-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        width: 100%;
-        overflow: hidden;
+        gap: 2px;
+        flex: 1;
+        height: 100%;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
+        padding-top: 2px;
+        transition: color 0.15s ease;
+      }
+      .dock-item svg {
+        width: 18px;
+        height: 18px;
+        transition: stroke 0.15s ease, transform 0.15s ease;
+      }
+      .dock-item:hover, .dock-item.active {
+        color: var(--accent);
+      }
+      .dock-item.active svg {
+        stroke: var(--accent);
+        transform: translateY(-1px);
+      }
+      .dock-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 14px;
+        height: 2px;
+        background: var(--accent);
+        border-radius: 2px;
+        box-shadow: 0 0 6px var(--accent);
+      }
     }
 
-    /* Pic ki settings takki wo screen se bahar na jaye */
-    .main-hero-pic {
-        width: 100%;
-        max-width: 500px; /* Mobile ke liye perfect size */
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    .mobile-bottom-dock {
+      display: none;
     }
 
-    /* Pic ke theek niche wala purple dabba */
-    .hero-info-box {
-        background: linear-gradient(135deg, #4b0082, #1a0033);
-        padding: 25px;
-        width: 100%;
-        max-width: 500px;
-        color: white;
-        border-radius: 0 0 20px 20px;
-        box-sizing: border-box; /* Padding ko manage karne ke liye */
+    /* 17. ACCESSIBILITY & REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      #cursor-dot, #cursor-ring { display: none !important; }
+      .pricing-card, .hero-panel-card { transform: none !important; }
     }
-
-    .hero-info-box h1 { font-size: 1.6rem; margin: 0; }
-    .hero-info-box p { font-size: 0.9rem; opacity: 0.8; margin-top: 10px; }
-</style>
-
-<section class="hero-container-new">
-    <img src="IMG_20260316_121023_213.jpg" class="main-hero-pic" alt="Ravan Cloud">
-    
-    
-</section>
-  
-<h1>Ravan Cloud</h1>
-
-</header>
-    
-<<<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravan Cloud | Professional RDP Hosting</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f8f9fa; color: #333; }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1e0533 0%, #3e0a6d 100%);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
-            clip-path: ellipse(150% 100% at 50% 0%); /* Curved bottom like pro sites */
-        }
-
-        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-        .hero span { color: #bb86fc; }
-        
-        /* Pricing Cards Container */
-        .pricing-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 50px 20px;
-            margin-top: -60px; /* Overlap effect */
-        }
-
-        /* The Card Design */
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            width: 320px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #eee;
-        }
-
-        .card:hover { transform: translateY(-10px); }
-
-        .card h2 { color: #1e0533; font-size: 1.5rem; margin-bottom: 10px; }
-        .price { font-size: 2rem; font-weight: 700; color: #8e2de2; margin: 15px 0; }
-        .price span { font-size: 1rem; color: #777; }
-
-        .features-list { list-style: none; text-align: left; margin: 25px 0; }
-        .features-list li { margin-bottom: 12px; font-size: 0.95rem; color: #555; }
-        .features-list i { color: #4caf50; margin-right: 10px; }
-
-        /* Button like the screenshot */
-        .btn {
-            display: inline-block;
-            background: linear-gradient(to right, #8e2de2, #4a00e0);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            width: 100%;
-            transition: opacity 0.3s;
-        }
-        .btn:hover { opacity: 0.9; }
-
-    </style>
+  </style>
 </head>
-<body>
 
-    <section class="hero">
-        <h1>Buy Cheapest <span>RDP Hosting</span> Online</h1>
-        <p>Ultra-fast & Reliable Windows RDP Servers starting at $3/mo</p>
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Ambience -->
+  <div class="bg-grid-overlay"></div>
+  <div class="bg-noise-overlay"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="header-wrap" id="headerWrap">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="brand" aria-label="Ravan Cloud Home">
+        <img src="IMG_20260316_121023_213.jpg" alt="Ravan Cloud" class="brand-logo-img" width="32" height="32" onerror="this.onerror=null; this.src='https://ravancloud.github.io/IMG_20260316_121023_213.jpg';">
+        <span class="brand-text">
+          Ravan Cloud
+          <span class="brand-dot" title="Systems 100% Operational"></span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="nav-links-wrap" id="navLinksWrap">
+        <div class="nav-pill-indicator" id="navPill"></div>
+        <a href="index.html" class="nav-link active" data-nav="home">Home</a>
+        <a href="index.html#pricing" class="nav-link" data-nav="pricing">Pricing</a>
+        <a href="locations.html" class="nav-link" data-nav="locations">Locations</a>
+        <a href="live.html" class="nav-link" data-nav="live">Live Status</a>
+        <a href="about.html" class="nav-link" data-nav="about">About</a>
+        <a href="index.html#faq" class="nav-link" data-nav="faq">FAQ</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="index.html#pricing" class="btn btn-accent header-cta magnetic">
+          <span class="btn-text">Get a server</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Glass Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:28px;">
+      <a href="index.html" class="brand" onclick="closeMobileDrawer()">
+        <img src="IMG_20260316_121023_213.jpg" alt="Ravan Cloud" class="brand-logo-img" width="30" height="30" onerror="this.onerror=null; this.src='https://ravancloud.github.io/IMG_20260316_121023_213.jpg';">
+        <span>Ravan Cloud</span>
+        <span class="brand-dot"></span>
+      </a>
+      <button onclick="closeMobileDrawer()" aria-label="Close Menu" style="width:38px; height:38px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--text); background:var(--surface);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active" data-nav="home" onclick="closeMobileDrawer()">Home</a></li>
+      <li><a href="index.html#pricing" class="mobile-nav-link" data-nav="pricing" onclick="closeMobileDrawer()">Plans & Pricing</a></li>
+      <li><a href="locations.html" class="mobile-nav-link" data-nav="locations" onclick="closeMobileDrawer()">Locations</a></li>
+      <li><a href="live.html" class="mobile-nav-link" data-nav="live" onclick="closeMobileDrawer()">Live Status</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-nav="about" onclick="closeMobileDrawer()">About Us</a></li>
+      <li><a href="index.html#faq" class="mobile-nav-link" data-nav="faq" onclick="closeMobileDrawer()">FAQ</a></li>
+    </ul>
+
+    <div class="mobile-contact-links">
+      <a href="index.html#pricing" class="btn btn-accent" onclick="closeMobileDrawer()">View Plans from $4/mo</a>
+      <button class="btn btn-ghost" onclick="closeMobileDrawer(); openTgModal();">Chat on Telegram</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column -->
+          <div class="hero-copy">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot"></span>
+              Enterprise NVMe Cloud
+            </div>
+
+            <div class="hero-title-mask">
+              <h1 class="hero-title">
+                Windows RDP & VPS that <span class="highlight">just stays online.</span>
+              </h1>
+            </div>
+
+            <p class="hero-subline">
+              Fast, reliable servers from $4/mo. Windows Server 2016/19/2022, Ubuntu, Linux. Engineered for 24/7 automated trading, bot workloads, and developers.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#pricing" class="btn btn-accent magnetic">
+                <span class="btn-text">View plans</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <button class="btn btn-ghost magnetic" onclick="openTgModal()">
+                <span>Chat on Telegram</span>
+              </button>
+            </div>
+
+            <div class="hero-trust-row">
+              <div class="trust-item">
+                <span class="trust-dot"></span>
+                <span><strong>99.9%</strong> uptime target</span>
+              </div>
+              <div class="trust-item">
+                <span>⚡ <strong>&lt;60s</strong> deploy</span>
+              </div>
+              <div class="trust-item">
+                <span>👥 <strong>1,000+</strong> clients</span>
+              </div>
+              <div class="trust-item">
+                <span>💬 <strong>24/7</strong> support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Glass Live Server Panel -->
+          <div class="hero-visual">
+            <div class="hero-panel-card" id="heroPanelCard">
+              <div class="panel-header">
+                <div class="panel-controls">
+                  <span class="ctrl-dot ctrl-red"></span>
+                  <span class="ctrl-dot ctrl-yellow"></span>
+                  <span class="ctrl-dot ctrl-green"></span>
+                </div>
+                <div class="panel-title">srv-node-04.ravancloud.net</div>
+                <div class="panel-badge">
+                  <span class="trust-dot" style="width:5px;height:5px;"></span>
+                  ONLINE
+                </div>
+              </div>
+
+              <!-- Telemetry Metrics -->
+              <div class="panel-metrics-grid">
+                <div class="metric-cell">
+                  <span class="metric-label">CPU LOAD</span>
+                  <div class="metric-val">12.4%</div>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-label">RAM ALLOC</span>
+                  <div class="metric-val">3.4 / 8 GB</div>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-label">PING</span>
+                  <div class="metric-val accent">14 ms</div>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-label">TARGET UPTIME</span>
+                  <div class="metric-val">99.98%</div>
+                </div>
+              </div>
+
+              <!-- Typing Terminal Simulation -->
+              <div class="panel-terminal">
+                <div class="term-line">
+                  <span class="term-prompt">$</span>
+                  <span id="termText"></span>
+                  <span class="term-cursor"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    
+    <!-- SOCIAL PROOF STRIP -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="99.9">0</span><span class="unit">%</span></div>
+            <div class="stat-desc">Uptime reliability target across nodes</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="1000">0</span><span class="unit">+</span></div>
+            <div class="stat-desc">Active clients and automated traders</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number"><span>24/7</span></div>
+            <div class="stat-desc">Direct Telegram technical assistance</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number"><span class="unit">&lt;</span><span class="counter" data-target="60">0</span><span class="unit">s</span></div>
+            <div class="stat-desc">Rapid deployment and credential delivery</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="pricing-container">
-        <div class="card">
-            <h2>Starter Small Work RDP/VPS</h2>
-            <div class="price">$4 <span>/mo</span></div>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i> 1 vCPU Cores</li>
-                <li><i class="fas fa-check-circle"></i> 2 GB RAM</li>
-                <li><i class="fas fa-check-circle"></i> 40 GB SSD Storage</li>
-                <li><i class="fas fa-check-circle"></i> Ubuntu / Linux /Windows Server 16/19/2022</li>
-                <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
-            </ul>
-            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank">
-   <button class="btn">Buy Now</button>
-            </a>
+    <!-- PRICING SECTION -->
+    <section class="section-pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">High Performance Infrastructure</span>
+          <h2 class="section-title">Transparent pricing. No surprises.</h2>
+          <p class="section-subtitle">Monthly billing with zero setup fees. Choose your ideal configuration or customize via Telegram.</p>
         </div>
 
-      <div class="pricing-container">
-        <div class="card">
-            <h2>Starter Middle Work RDP/VPS</h2>
-        <div class="price">$6 <span>/mo</span></div>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i> 2 vCPU Cores</li>
-                <li><i class="fas fa-check-circle"></i> 4 GB RAM</li>
-                <li><i class="fas fa-check-circle"></i> 80 GB SSD Storage</li>
-                <li><i class="fas fa-check-circle"></i> Ubuntu / Linux /Windows Server 16/19/2022</li>
-                <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
-            </ul>
-            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank">
-   <button class="btn">Buy Now</button>
+        <!-- Filter Chips Row -->
+        <div class="filter-chips-wrap">
+          <div class="filter-chips" id="filterChips">
+            <div class="chip-indicator" id="chipIndicator"></div>
+            <button class="chip-btn active" data-filter="all">All Plans</button>
+            <button class="chip-btn" data-filter="trading">Trading</button>
+            <button class="chip-btn" data-filter="development">Development</button>
+            <button class="chip-btn" data-filter="business">Business</button>
+            <button class="chip-btn" data-filter="heavy">Heavy Workloads</button>
+          </div>
+        </div>
+
+        <!-- Mobile Pricing Mode Toggle (Swipe Carousel / All Plans Stacked) -->
+        <div class="mobile-pricing-toggle" id="mobilePricingToggle">
+          <button class="pricing-toggle-btn active" id="btnToggleSwipe" onclick="setPricingView('swipe')">⇄ Swipe Cards</button>
+          <button class="pricing-toggle-btn" id="btnToggleList" onclick="setPricingView('list')">☰ Stacked List</button>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-grid" id="pricingGrid">
+
+          <!-- 1. Starter ($4) -->
+          <article class="pricing-card" data-category="development" data-plan="starter">
+            <div>
+              <div class="card-badge-row">
+                <span class="plan-tag">ENTRY TIER</span>
+              </div>
+              <h3 class="card-plan-name">Starter</h3>
+              <p class="card-plan-subtitle">Lightweight tasks, proxy routing, and testing environments.</p>
+
+              <div class="card-price-row">
+                <span class="price-currency">$</span>
+                <span class="price-num" data-price="4">4</span>
+                <span class="price-period">/mo</span>
+              </div>
+
+              <div class="uptime-badge">
+                <span class="trust-dot" style="width:5px;height:5px;"></span> 99.9% uptime target
+              </div>
+
+              <ul class="card-specs">
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span><strong>1 vCPU</strong> Core</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 19v-3M10 19v-3M14 19v-3M18 19v-3M6 8V5M10 8V5M14 8V5M18 8V5M2 8h20v8H2z"></path></svg>
+                  <span><strong>2 GB</strong> RAM</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span><strong>40 GB</strong> NVMe SSD</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                  <span>Win 16/19/2022 / Ubuntu</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-ghost card-cta-btn" onclick="handleBuyClick(this)">
+              <span class="btn-text">Buy now</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
+            </button>
+          </article>
+
+          <!-- 2. Basic ($6) -->
+          <article class="pricing-card" data-category="development" data-plan="basic">
+            <div>
+              <div class="card-badge-row">
+                <span class="plan-tag">STANDARD DEV</span>
+              </div>
+              <h3 class="card-plan-name">Basic</h3>
+              <p class="card-plan-subtitle">Ideal for dev servers, web scrapers, and 24/7 background bots.</p>
+
+              <div class="card-price-row">
+                <span class="price-currency">$</span>
+                <span class="price-num" data-price="6">6</span>
+                <span class="price-period">/mo</span>
+              </div>
+
+              <div class="uptime-badge">
+                <span class="trust-dot" style="width:5px;height:5px;"></span> 99.9% uptime target
+              </div>
+
+              <ul class="card-specs">
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span><strong>2 vCPU</strong> Cores</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 19v-3M10 19v-3M14 19v-3M18 19v-3M6 8V5M10 8V5M14 8V5M18 8V5M2 8h20v8H2z"></path></svg>
+                  <span><strong>4 GB</strong> RAM</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span><strong>80 GB</strong> NVMe SSD</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                  <span>Win 16/19/2022 / Ubuntu</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-ghost card-cta-btn" onclick="handleBuyClick(this)">
+              <span class="btn-text">Buy now</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
+            </button>
+          </article>
+
+          <!-- 3. Standard ($11) - MOST POPULAR / GLASS TREATMENT -->
+          <article class="pricing-card featured" data-category="trading development" data-plan="standard">
+            <div>
+              <div class="card-badge-row">
+                <span class="plan-tag">TRADING FAVORITE</span>
+                <span class="plan-badge-popular">Most Popular</span>
+              </div>
+              <h3 class="card-plan-name">Standard</h3>
+              <p class="card-plan-subtitle">Specially tuned for MT4 / MT5 automated forex trading bots.</p>
+
+              <div class="card-price-row">
+                <span class="price-currency">$</span>
+                <span class="price-num" data-price="11">11</span>
+                <span class="price-period">/mo</span>
+              </div>
+
+              <div class="uptime-badge">
+                <span class="trust-dot" style="width:5px;height:5px;"></span> 99.9% uptime target
+              </div>
+
+              <ul class="card-specs">
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span><strong>4 vCPU</strong> Cores</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 19v-3M10 19v-3M14 19v-3M18 19v-3M6 8V5M10 8V5M14 8V5M18 8V5M2 8h20v8H2z"></path></svg>
+                  <span><strong>8 GB</strong> RAM</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span><strong>160 GB</strong> NVMe SSD</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                  <span>Win 16/19/2022 / Ubuntu</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-accent card-cta-btn" onclick="handleBuyClick(this)">
+              <span class="btn-text">Buy now</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
+            </button>
+          </article>
+
+          <!-- 4. Performance ($20) -->
+          <article class="pricing-card" data-category="trading business" data-plan="performance">
+            <div>
+              <div class="card-badge-row">
+                <span class="plan-tag">MULTI-TERMINAL</span>
+              </div>
+              <h3 class="card-plan-name">Performance</h3>
+              <p class="card-plan-subtitle">Multiple MetaTrader instances, heavy indicators, and databases.</p>
+
+              <div class="card-price-row">
+                <span class="price-currency">$</span>
+                <span class="price-num" data-price="20">20</span>
+                <span class="price-period">/mo</span>
+              </div>
+
+              <div class="uptime-badge">
+                <span class="trust-dot" style="width:5px;height:5px;"></span> 99.9% uptime target
+              </div>
+
+              <ul class="card-specs">
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span><strong>8 vCPU</strong> Cores</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 19v-3M10 19v-3M14 19v-3M18 19v-3M6 8V5M10 8V5M14 8V5M18 8V5M2 8h20v8H2z"></path></svg>
+                  <span><strong>16 GB</strong> RAM</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span><strong>240 GB</strong> NVMe SSD</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                  <span>Win 16/19/2022 / Ubuntu</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-ghost card-cta-btn" onclick="handleBuyClick(this)">
+              <span class="btn-text">Buy now</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
+            </button>
+          </article>
+
+          <!-- 5. Pro ($35) -->
+          <article class="pricing-card" data-category="business" data-plan="pro">
+            <div>
+              <div class="card-badge-row">
+                <span class="plan-tag">TEAM REMOTE OFFICE</span>
+              </div>
+              <h3 class="card-plan-name">Pro</h3>
+              <p class="card-plan-subtitle">Multi-user remote offices, QuickBooks, accounting & staging.</p>
+
+              <div class="card-price-row">
+                <span class="price-currency">$</span>
+                <span class="price-num" data-price="35">35</span>
+                <span class="price-period">/mo</span>
+              </div>
+
+              <div class="uptime-badge">
+                <span class="trust-dot" style="width:5px;height:5px;"></span> 99.9% uptime target
+              </div>
+
+              <ul class="card-specs">
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span><strong>16 vCPU</strong> Cores</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 19v-3M10 19v-3M14 19v-3M18 19v-3M6 8V5M10 8V5M14 8V5M18 8V5M2 8h20v8H2z"></path></svg>
+                  <span><strong>32 GB</strong> RAM</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span><strong>480 GB</strong> NVMe SSD</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                  <span>Win 16/19/2022 / Ubuntu</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-ghost card-cta-btn" onclick="handleBuyClick(this)">
+              <span class="btn-text">Buy now</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
+            </button>
+          </article>
+
+          <!-- 6. Ultimate ($50) -->
+          <article class="pricing-card" data-category="heavy" data-plan="ultimate">
+            <div>
+              <div class="card-badge-row">
+                <span class="plan-tag">MAX COMPUTE</span>
+              </div>
+              <h3 class="card-plan-name">Ultimate</h3>
+              <p class="card-plan-subtitle">Heavy compilation, high-speed data processing, and large VMs.</p>
+
+              <div class="card-price-row">
+                <span class="price-currency">$</span>
+                <span class="price-num" data-price="50">50</span>
+                <span class="price-period">/mo</span>
+              </div>
+
+              <div class="uptime-badge">
+                <span class="trust-dot" style="width:5px;height:5px;"></span> 99.9% uptime target
+              </div>
+
+              <ul class="card-specs">
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span><strong>16 vCPU</strong> Cores</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 19v-3M10 19v-3M14 19v-3M18 19v-3M6 8V5M10 8V5M14 8V5M18 8V5M2 8h20v8H2z"></path></svg>
+                  <span><strong>64 GB</strong> RAM</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span><strong>960 GB</strong> NVMe SSD</span>
+                </li>
+                <li class="spec-item">
+                  <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                  <span>Win 16/19/2022 / Ubuntu</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-ghost card-cta-btn" onclick="handleBuyClick(this)">
+              <span class="btn-text">Buy now</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
+            </button>
+          </article>
+
+        </div>
+
+        <!-- Mobile Carousel Dots -->
+        <div class="pricing-dots" id="pricingDots">
+          <span class="p-dot active"></span>
+          <span class="p-dot"></span>
+          <span class="p-dot"></span>
+          <span class="p-dot"></span>
+          <span class="p-dot"></span>
+          <span class="p-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- "WHY RAVAN CLOUD" BENTO GRID -->
+    <section class="section-bento">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineered for Performance</span>
+          <h2 class="section-title">Why choose Ravan Cloud?</h2>
+          <p class="section-subtitle">No bloated tiers. Built on high-speed hardware with complete administrative authority.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- 1. Pure NVMe SSD Storage (2 columns) -->
+          <div class="bento-card span-2">
+            <div>
+              <div class="bento-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+              </div>
+              <h3 class="bento-title">Enterprise Pure NVMe Storage</h3>
+              <p class="bento-desc">All nodes run on PCIe Gen4 NVMe arrays delivering read/write throughput over 3,500 MB/s. Say goodbye to spinning disk bottlenecks and frozen RDP sessions.</p>
+            </div>
+            <div class="bento-metric-tag">3,500+ MB/S SEQUENTIAL SPEED</div>
+          </div>
+
+          <!-- 2. Dual OS Freedom -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="bento-title">Windows & Linux Freedom</h3>
+              <p class="bento-desc">Deploy your choice of Windows Server 2016, 2019, 2022 or popular Linux distros like Ubuntu, Debian, and AlmaLinux.</p>
+            </div>
+            <div class="bento-metric-tag">CLEAN ISO INSTALLS</div>
+          </div>
+
+          <!-- 3. Low Latency MT4/MT5 -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <h3 class="bento-title">Built for MT4/MT5 Traders</h3>
+              <p class="bento-desc">Low-jitter network routing to broker gateways. Run automated Expert Advisors (EAs) 24 hours a day without unexpected restarts.</p>
+            </div>
+            <div class="bento-metric-tag">14MS BROKER ROUTING</div>
+          </div>
+
+          <!-- 4. Budget-Friendly Pricing -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="bento-title">Predictable Pricing from $4</h3>
+              <p class="bento-desc">Premium cloud power without enterprise price gouging. Clear monthly billing with zero contracts or hidden termination penalties.</p>
+            </div>
+            <div class="bento-metric-tag">FLAT MONTHLY RATES</div>
+          </div>
+
+          <!-- 5. Instant 60s Deployment (2 columns) -->
+          <div class="bento-card span-2">
+            <div>
+              <div class="bento-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3 class="bento-title">Rapid 60-Second Provisioning</h3>
+              <p class="bento-desc">Automated provisioning pipeline delivers your server IP, dedicated Administrator credentials, and remote desktop access straight to your inbox and Telegram.</p>
+            </div>
+            <div class="bento-metric-tag">AUTOMATED QUEUE PIPELINE</div>
+          </div>
+
+          <!-- 6. Full Root & Admin Access -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <h3 class="bento-title">Full Root & Admin Control</h3>
+              <p class="bento-desc">100% unrestricted administrative authority. Install any custom trading tools, Docker packages, or custom drivers with zero limitations.</p>
+            </div>
+            <div class="bento-metric-tag">UNRESTRICTED ACCESS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS (3 STEPS) -->
+    <section class="section-steps">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Getting Started</span>
+          <h2 class="section-title">Up and running in 3 simple steps</h2>
+          <p class="section-subtitle">No complicated cloud consoles. Just choose your server and connect.</p>
+        </div>
+
+        <div class="steps-grid" id="stepsGrid">
+          <div class="steps-connect-line">
+            <div class="steps-connect-fill" id="stepsFill"></div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num-pill">01</div>
+            <h3 class="step-title">Choose your plan</h3>
+            <p class="step-desc">Pick the vCPU, RAM, and SSD storage configuration matching your MT4 trading terminals or developer workloads.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num-pill">02</div>
+            <h3 class="step-title">Submit your details</h3>
+            <p class="step-desc">Fill out our quick 1-minute secure Google Form with your OS choice (Windows Server or Ubuntu) and Telegram handle.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num-pill">03</div>
+            <h3 class="step-title">Receive login & connect</h3>
+            <p class="step-desc">Get your dedicated server IP and Administrator password. Open Remote Desktop Connection (MSTSC) and start working.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (Interactive EN / Hindi Toggle) -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-top-bar">
+            <div>
+              <span class="section-tag">Established 2016</span>
+              <h2 class="section-title" style="margin-bottom:0;">About Ravan Cloud</h2>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="lang-toggle-wrap" role="group" aria-label="Language Selection">
+              <button class="lang-btn active" id="langEnBtn" onclick="setLanguage('en')">English</button>
+              <button class="lang-btn" id="langHiBtn" onclick="setLanguage('hi')">हिंदी / Hinglish</button>
+            </div>
+          </div>
+
+          <!-- English Description -->
+          <div class="about-content-box" id="aboutTextEn">
+            <p>Welcome to <strong>Ravan Cloud</strong>, your dependable partner for high-performance Windows RDP and Linux VPS hosting. Since 2016, we have proudly served thousands of automated traders, software developers, and independent entrepreneurs seeking rock-solid remote servers at honest prices.</p>
+            <p>By investing in modern NVMe storage nodes, redundant power grids, and round-the-clock Telegram technical support, we ensure your trading bots, web scrapers, and remote workflows stay online continuously. We bridge the gap between enterprise-grade reliability and budget affordability.</p>
+          </div>
+
+          <!-- Hindi / Hinglish Description -->
+          <div class="about-content-box" id="aboutTextHi" style="display:none;">
+            <p><strong>Ravan Cloud</strong> में आपका स्वागत है—हाई-परफॉरमेंस RDP और VPS होस्टिंग के लिए आपका सबसे भरोसेमंद साथी। 2016 से हम दुनिया भर के ट्रेडर्स, डेवलपर्स और बिजनेस ओनर्स को तेज़, सुरक्षित और किफायती रिमोट डेस्कटॉप सेवाएं प्रदान कर रहे हैं।</p>
+            <p>हमारे एंटरप्राइज-ग्रेड NVMe इंफ्रास्ट्रक्चर और 24/7 टेलीग्राम सपोर्ट के साथ, आपके MT4/MT5 ट्रेडिंग बॉट्स और टूल्स बिना किसी रुकावट के चलते हैं। हमारा वादा है—सस्ता, तेज़ और भरोसेमंद क्लाउड सॉल्यूशन।</p>
+          </div>
+
+          <!-- Telegram RAM/vCPU Notice Banner -->
+          <div class="notice-banner">
+            <div class="notice-text">
+              <svg class="notice-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span><strong>Custom Requirements?</strong> You can discuss customized RAM, vCPU, and storage directly on Telegram (additional configuration fees may apply).</span>
+            </div>
+            <button class="btn btn-ghost" onclick="openTgModal()" style="padding:6px 14px; font-size:0.8rem;">
+              Discuss on Telegram
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clear Answers</span>
+          <h2 class="section-title">Frequently asked questions</h2>
+          <p class="section-subtitle">Everything you need to know about our RDP & VPS nodes, OS options, and delivery.</p>
+        </div>
+
+        <div class="faq-list">
+
+          <!-- Q1 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How fast will I receive my RDP login details after ordering?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                Provisioning typically takes between 10 to 60 minutes after confirmation. Once ready, your server IP, Administrator username, and secure password are sent directly to your Telegram handle and email.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I run MetaTrader 4 (MT4) or MetaTrader 5 (MT5) for automated forex trading?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes, absolutely. Our Standard ($11/mo) and Performance ($20/mo) tiers are widely used by forex traders. Our servers run 24/7 without sleep mode, ensuring your Expert Advisors (EAs) and automated trade scripts execute uninterrupted.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Which operating systems are available?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                You can select Windows Server 2016, Windows Server 2019, or Windows Server 2022. For developers requiring Linux, we support Ubuntu LTS (20.04/22.04), Debian, and CentOS.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What payment methods do you accept?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                We accept multiple convenient payment options including UPI (PhonePe, Google Pay, Paytm), International Cards, and Cryptocurrency (USDT/BTC). Simply submit the order form or contact our Telegram team for quick checkout.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do I get full Administrator / Root rights?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes. Every server provisioned by Ravan Cloud comes with full, unrestricted Administrator privileges on Windows and Root access on Linux. You can install any software, configure firewalls, and run background services freely.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I upgrade my RAM, CPU, or SSD storage later?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes! If your workload grows, message us on Telegram. We can scale your RAM, vCPU cores, and SSD allocation without data loss (fee adjustments apply based on resources added).
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="section-cta-banner">
+      <div class="container">
+        <div class="cta-banner-card">
+          <h2 class="cta-title">Ready to launch your server?</h2>
+          <p class="cta-desc">Join 1,000+ traders and developers who trust Ravan Cloud for uninterrupted uptime and lightning-fast remote computing.</p>
+          <div class="cta-buttons">
+            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank" rel="noopener" class="btn btn-accent magnetic" onclick="handleBuyClick(this)">
+              <span class="btn-text">Order Server from $4</span>
+              <span class="btn-arrow">→</span>
+              <span class="spinner"></span>
             </a>
+            <button class="btn btn-ghost magnetic" onclick="openTgModal()">
+              <span>Contact on Telegram</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">
+            <img src="IMG_20260316_121023_213.jpg" alt="Ravan Cloud" class="brand-logo-img" width="28" height="28" onerror="this.onerror=null; this.src='https://ravancloud.github.io/IMG_20260316_121023_213.jpg';">
+            <span>Ravan Cloud</span>
+          </a>
+          <p class="footer-brand-desc">Fast, secure, budget-first Windows RDP & Linux VPS hosting with 99.9% uptime target. Serving traders and developers worldwide.</p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Plans & Pricing</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="live.html">Live Status</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Order & Setup</div>
+          <ul class="footer-links">
+            <li><a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank" rel="noopener">Order Google Form</a></li>
+            <li><a href="index.html#pricing">MT4 / MT5 Server</a></li>
+            <li><a href="index.html#pricing">Windows Server 2022</a></li>
+            <li><a href="index.html#pricing">Ubuntu Linux VPS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Support & Contact</div>
+          <ul class="footer-links">
+            <li><a href="https://t.me/Ravancloud_bot" target="_blank" rel="noopener">Telegram Bot (@Ravancloud_bot)</a></li>
+            <li><a href="https://t.me/alvida_my_love" target="_blank" rel="noopener">Owner Telegram (@alvida_my_love)</a></li>
+            <li><a href="live.html">Real-Time Server Health</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Ravan Cloud. All rights reserved.
+        </div>
+        <div class="status-indicator-pill">
+          <span class="trust-dot" style="width:6px;height:6px;"></span>
+          <span>All Nodes Online &bull; 99.9% Target Uptime</span>
+        </div>
+      </div>
     </div>
+  </footer>
 
+  <!-- Mobile Bottom Dock (App-Like 1-Tap Thumb Navigation) -->
+  <nav class="mobile-bottom-dock" id="mobileBottomDock" aria-label="Mobile Navigation">
+    <a href="index.html" class="dock-item active" data-nav="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="index.html#pricing" class="dock-item" data-nav="pricing">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      <span>Plans</span>
+    </a>
+    <a href="locations.html" class="dock-item" data-nav="locations">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+      <span>Nodes</span>
+    </a>
+    <a href="live.html" class="dock-item" data-nav="live">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      <span>Live</span>
+    </a>
+    <a href="javascript:void(0)" class="dock-item" onclick="openTgModal()" aria-label="Open Telegram Support">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>Chat</span>
+    </a>
+  </nav>
 
-<div class="pricing-container">
-        <div class="card">
-            <h2>Starter Expensive Work RDP/VPS</h2>
-<div class="price">$11 <span>/mo</span></div>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i> 4 vCPU Cores</li>
-                <li><i class="fas fa-check-circle"></i> 8 GB RAM</li>
-                <li><i class="fas fa-check-circle"></i> 160 GB SSD Storage</li>
-                <li><i class="fas fa-check-circle"></i> Ubuntu / Linux  /Windows Server 16/19/2022</li>
-                <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
-            </ul>
-            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank">
-   <button class="btn">Buy Now</button>
-            </a>
-</div>
+  <!-- TELEGRAM CONTACT MODAL -->
+  <div class="modal-backdrop" id="tgModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card" id="tgModalCard">
+      <button class="modal-close-btn" id="modalCloseBtn" onclick="closeTgModal()" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
 
-<div class="pricing-container">
-        <div class="card">
-            <h2>Starter High Performance RDP/VPS</h2>
-<div class="price">$20<span>/mo</span></div>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i> 8 vCPU Cores</li>
-                <li><i class="fas fa-check-circle"></i> 16 GB RAM</li>
-                <li><i class="fas fa-check-circle"></i> 160 GB SSD Storage</li>
-                <li><i class="fas fa-check-circle"></i> Ubuntu / Linux  /Windows Server 16/19/2022</li>
-                <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
-            </ul>
-            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank">
-   <button class="btn">Buy Now</button>
-            </a>
+      <h3 class="modal-title" id="modalTitle">Connect with Ravan Cloud</h3>
+      <p class="modal-desc">Direct 24/7 assistance for setup, server customizations, and instant renewals.</p>
 
-
-   <div class="pricing-container">
-        <div class="card">
-            <h2>Starter Pro Server High Manage RDP/VPS</h2> 
-<div class="price">$35 <span>/mo</span></div>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i> 16 vCPU Cores</li>
-                <li><i class="fas fa-check-circle"></i> 32 GB RAM</li>
-                <li><i class="fas fa-check-circle"></i> 320 GB SSD Storage</li>
-                <li><i class="fas fa-check-circle"></i> Ubuntu / Linux  /Windows Server 16/19)2022</li>
-                <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
-            </ul>
-            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank">
-   <button class="btn">Buy Now</button>
-            </a>
-        <
-        
-<div class="pricing-container">
-        <div class="card">
-            <h2>Starter Pro Server High Manage RDP/VPS</h2> 
-<div class="price">$50 <span>/mo</span></div>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i> 16 vCPU Cores</li>
-                <li><i class="fas fa-check-circle"></i> 64 GB RAM</li>
-                <li><i class="fas fa-check-circle"></i> 940 GB SSD Storage</li>
-                <li><i class="fas fa-check-circle"></i> Ubuntu / Linux  /Windows Server 16/19)2022</li>
-                <li><i class="fas fa-check-circle"></i> 99.9% Uptime</li>
-            </ul>
-            <a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank">
-   <button class="btn">Buy Now</button>
-            </a>
-          
-</div>
-
-     <style>
-    /* Professional About Section Styling */
-    .about-ravan {
-        padding: 70px 20px;
-        background: #ffffff;
-        text-align: center;
-        border-top: 1px solid #eee;
-    }
-
-    .about-wrapper {
-        max-width: 950px;
-        margin: 0 auto;
-    }
-
-    .about-ravan h2 {
-        font-size: 2.4rem;
-        color: #1e0533;
-        margin-bottom: 15px;
-        font-weight: 700;
-    }
-
-    .about-ravan h2 span {
-        color: #8e2de2;
-    }
-
-    .hindi-text {
-        font-size: 1.15rem;
-        color: #444;
-        line-height: 1.8;
-        margin-bottom: 25px;
-        font-weight: 400;
-    }
-
-    /* Stats Styling */
-    .stats-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .stat-card {
-        background: #f8f0ff;
-        padding: 25px;
-        border-radius: 15px;
-        min-width: 220px;
-        border-bottom: 4px solid #8e2de2;
-        transition: 0.3s;
-    }
-
-    .stat-card:hover {
-        transform: translateY(-5px);
-        background: #f3e8ff;
-    }
-
-    .stat-card h3 {
-        font-size: 2.2rem;
-        color: #1e0533;
-        margin-bottom: 5px;
-    }
-
-    .stat-card p {
-        font-weight: 700;
-        color: #8e2de2;
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
-
-    .stat-desc {
-        font-size: 0.85rem;
-        color: #666;
-        line-height: 1.4;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-        .about-ravan h2 { font-size: 1.8rem; }
-        .stat-card { width: 100%; }
-    }
-</style>
-
-<section class="about-ravan">
-    <div class="about-wrapper">
-        <h2>About <span>Ravan Cloud</span></h2>
-        
-        <div class="hindi-text">
-            <p><strong>Ravan Cloud</strong> mein aapka swagat hai, jo high-performance RDP aur VPS hosting solutions ke liye aapka ek bharosemand saathi hai. Hum traders, developers, aur duniya bhar ke business owners ke liye tez, surakshit aur sasti remote desktop services dene ke liye committed hain.</p>
-            <p style="margin-top: 15px;">Hamare enterprise-grade infrastructure aur 24/7 expert support ke saath, hum ye pakka karte hain ki aapka kaam bina kisi rukawat ke chalta rahe. Hamara maqsad premium technology aur kam qimat ke beech ke fasle ko khatam karna hai.</p>
+      <div class="modal-contact-row">
+        <!-- Option 1: Official Bot -->
+        <div class="tg-option-card">
+          <div class="tg-info">
+            <div class="tg-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </div>
+            <div>
+              <div class="tg-title">Support Bot</div>
+              <div class="tg-handle">@Ravancloud_bot</div>
+            </div>
+          </div>
+          <div class="tg-actions">
+            <button class="copy-btn" onclick="copyHandle('@Ravancloud_bot', this)">Copy</button>
+            <a href="https://t.me/Ravancloud_bot" target="_blank" rel="noopener" class="btn btn-accent" style="padding:6px 12px; font-size:0.78rem;">Open</a>
+          </div>
         </div>
 
-        <div class="stats-box">
-            <div class="stat-card">
-                <h3>99.9%</h3>
-                <p>Uptime Guaranteed</p>
-                <div class="stat-desc">Iska matlab hai ki aapka server kabhi band nahi hoga, hamesha chalta rahega.</div>
+        <!-- Option 2: Owner Personal ID -->
+        <div class="tg-option-card">
+          <div class="tg-info">
+            <div class="tg-icon-badge" style="background:rgba(198,255,61,0.15); color:var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </div>
-
-            <div class="stat-card">
-                <h3>1000+</h3>
-                <p>Happy Clients</p>
-                <div class="stat-desc">1000 se zyada khush customers hamari service use kar rahe hain.</div>
+            <div>
+              <div class="tg-title">Personal Support</div>
+              <div class="tg-handle">@alvida_my_love</div>
             </div>
-
-            <div class="stat-card">
-                <h3>24/7</h3>
-                <p>Expert Support</p>
-                <div class="stat-desc">Din ho ya raat, hamari team madad ke liye hamesha taiyar hai.</div>
-            </div>
+          </div>
+          <div class="tg-actions">
+            <button class="copy-btn" onclick="copyHandle('@alvida_my_love', this)">Copy</button>
+            <a href="https://t.me/alvida_my_love" target="_blank" rel="noopener" class="btn btn-accent" style="padding:6px 12px; font-size:0.78rem;">Open</a>
+          </div>
         </div>
+      </div>
+
+      <p class="modal-notice">
+        ℹ <strong>Notice:</strong> You can discuss customized RAM / vCPU / storage requirements on Telegram, but additional resource fees may apply.
+      </p>
     </div>
-</section>
-     
-    <footer>
+  </div>
 
-© 2026 Ravan Cloud  
-Telegram: @alvida_my_love
+  <!-- VANILLA JAVASCRIPT LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* 1. LENIS SMOOTH SCROLL (with fallback) */
+      let lenis = null;
+      if (typeof Lenis !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        try {
+          lenis = new Lenis({
+            duration: 1.1,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            touchMultiplier: 2
+          });
+
+          if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+              lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+          } else {
+            function raf(time) {
+              lenis.raf(time);
+              requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+          }
+        } catch (e) {
+          console.warn('Lenis initialization notice:', e);
+        }
+      }
+
+      /* 2. GSAP SCROLLTRIGGER ANIMATIONS */
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Entrance (600ms quick intro)
+        gsap.from('.hero-eyebrow', { opacity: 0, y: -15, duration: 0.5, ease: 'power2.out', delay: 0.1 });
+        gsap.from('.hero-title', { opacity: 0, y: 35, duration: 0.7, ease: 'power3.out', delay: 0.2 });
+        gsap.from('.hero-subline', { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out', delay: 0.35 });
+        gsap.from('.hero-ctas', { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out', delay: 0.45 });
+        gsap.from('.hero-trust-row', { opacity: 0, y: 15, duration: 0.6, ease: 'power2.out', delay: 0.55 });
+        gsap.from('#heroPanelCard', { opacity: 0, y: 40, scale: 0.98, duration: 0.8, ease: 'power3.out', delay: 0.3 });
+
+        // Subtle Parallax on Hero Panel
+        gsap.to('#heroPanelCard', {
+          y: -25,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.hero-section',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+
+        // Section Reveal Transitions (Fade + 24px rise + slight blur-to-sharp, once only)
+        const revealSections = ['.section-pricing', '.section-bento', '.section-steps', '.section-about', '.section-faq', '.section-cta-banner'];
+        revealSections.forEach((secSelector) => {
+          const el = document.querySelector(secSelector);
+          if (el) {
+            gsap.from(el, {
+              opacity: 0,
+              y: 28,
+              filter: 'blur(4px)',
+              duration: 0.7,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+        });
+
+        // Steps progress connecting line
+        ScrollTrigger.create({
+          trigger: '#stepsGrid',
+          start: 'top 75%',
+          end: 'bottom 65%',
+          scrub: 1,
+          onUpdate: (self) => {
+            const fill = document.getElementById('stepsFill');
+            if (fill) fill.style.width = `${self.progress * 100}%`;
+          }
+        });
+      }
+
+      /* 3. SMART STICKY NAVBAR & SCROLL PROGRESS */
+      const headerWrap = document.getElementById('headerWrap');
+      const scrollProgress = document.getElementById('scroll-progress');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currY = window.scrollY;
+        
+        // Progress bar
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0 && scrollProgress) {
+          const progress = (currY / totalHeight) * 100;
+          scrollProgress.style.width = `${progress}%`;
+        }
+
+        // Header scrolled state
+        if (headerWrap) {
+          if (currY > 60) {
+            headerWrap.classList.add('scrolled');
+          } else {
+            headerWrap.classList.remove('scrolled');
+          }
+
+          // Smart hide on scroll down, show on scroll up
+          if (currY > 200 && currY > lastScrollY && !headerWrap.classList.contains('nav-hidden')) {
+            headerWrap.classList.add('nav-hidden');
+          } else if (currY < lastScrollY && headerWrap.classList.contains('nav-hidden')) {
+            headerWrap.classList.remove('nav-hidden');
+          }
+        }
+        lastScrollY = currY;
+      }, { passive: true });
+
+      /* 4. NAVBAR SHARED-ELEMENT MORPHING PILL INDICATOR */
+      const navLinksWrap = document.getElementById('navLinksWrap');
+      const navPill = document.getElementById('navPill');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      if (navLinksWrap && navPill && navLinks.length > 0) {
+        navLinks.forEach((link) => {
+          link.addEventListener('mouseenter', () => {
+            const rect = link.getBoundingClientRect();
+            const parentRect = navLinksWrap.getBoundingClientRect();
+            navPill.style.width = `${rect.width}px`;
+            navPill.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+            navPill.style.opacity = '1';
+          });
+        });
+
+        navLinksWrap.addEventListener('mouseleave', () => {
+          navPill.style.opacity = '0';
+        });
+      }
+
+      /* 5. THEME TOGGLE (Dark / Light with Circular Reveal & Memory) */
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const sunIcon = themeToggleBtn ? themeToggleBtn.querySelector('.sun-icon') : null;
+      const moonIcon = themeToggleBtn ? themeToggleBtn.querySelector('.moon-icon') : null;
+
+      function updateThemeIcons(theme) {
+        if (!sunIcon || !moonIcon) return;
+        if (theme === 'light') {
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+        } else {
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'block';
+        }
+      }
+
+      // Check saved preference or system preference
+      const savedTheme = localStorage.getItem('ravan_theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
       
+      document.documentElement.setAttribute('data-theme', initialTheme);
+      updateThemeIcons(initialTheme);
 
-<script>
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', (e) => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-function openPopup(){
-document.getElementById("popupBox").style.display="block";
-}
+          // Circular reveal effect if supported
+          if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const x = e.clientX;
+            const y = e.clientY;
+            const endRadius = Math.hypot(
+              Math.max(x, window.innerWidth - x),
+              Math.max(y, window.innerHeight - y)
+            );
 
-function closePopup(){
-document.getElementById("popupBox").style.display="none";
-}
-  
-    
+            const transition = document.startViewTransition(() => {
+              document.documentElement.setAttribute('data-theme', newTheme);
+              localStorage.setItem('ravan_theme', newTheme);
+              updateThemeIcons(newTheme);
+            });
+
+            transition.ready.then(() => {
+              document.documentElement.animate(
+                {
+                  clipPath: [
+                    `circle(0px at ${x}px ${y}px)`,
+                    `circle(${endRadius}px at ${x}px ${y}px)`
+                  ]
+                },
+                {
+                  duration: 400,
+                  easing: 'ease-in-out',
+                  pseudoElement: '::view-transition-new(root)'
+                }
+              );
+            });
+          } else {
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('ravan_theme', newTheme);
+            updateThemeIcons(newTheme);
+          }
+        });
+      }
+
+      /* 6. CUSTOM CURSOR WITH LERP FOLLOWER (Desktop only) */
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+
+      if (dot && ring && window.matchMedia('(pointer: fine)').matches) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let cursorVisible = false;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (!cursorVisible) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            cursorVisible = true;
+          }
+          dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+        });
+
+        // Lerp loop for the trailing ring
+        function renderCursor() {
+          ringX += (mouseX - ringX) * 0.18;
+          ringY += (mouseY - ringY) * 0.18;
+          ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+          requestAnimationFrame(renderCursor);
+        }
+        renderCursor();
+
+        // Hover scale over interactive elements
+        const hoverElements = 'a, button, .pricing-card, .bento-card, .chip-btn, .faq-trigger, .lang-btn';
+        document.querySelectorAll(hoverElements).forEach((el) => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+      }
+
+      /* 7. MAGNETIC BUTTON HOVER EFFECT */
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.querySelectorAll('.magnetic').forEach((btn) => {
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const relX = e.clientX - rect.left - rect.width / 2;
+            const relY = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${relX * 0.22}px, ${relY * 0.22}px)`;
+          });
+
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0px, 0px)';
+          });
+        });
+      }
+
+      /* 8. 3D CARD TILT & CURSOR SPOTLIGHT TRACKING */
+      const tiltCards = document.querySelectorAll('.pricing-card, .bento-card, #heroPanelCard');
+      if (window.matchMedia('(pointer: fine)').matches) {
+        tiltCards.forEach((card) => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Set CSS spotlight position variables
+            card.style.setProperty('--mx', `${x}px`);
+            card.style.setProperty('--my', `${y}px`);
+
+            // Subtle 3D tilt (max 5deg)
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -5;
+            const rotateY = ((x - centerX) / centerX) * 5;
+
+            card.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-3px)`;
+          });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+          });
+        });
+      }
+
+      /* 9. HERO LIVE TERMINAL TYPEWRITER */
+      const termEl = document.getElementById('termText');
+      const terminalCommands = [
+        "ravan-cloud deploy --plan standard --os win2022",
+        "ravan-cloud provision: allocating 4 vCPU & 8 GB RAM [OK]",
+        "ravan-cloud storage: mounting 160 GB NVMe Gen4 array [OK]",
+        "ravan-cloud network: configuring RDP port 3389 TLS 1.3 [OK]",
+        "✓ Server deployed in 58s. Uptime: 99.98% | Ping: 14ms"
+      ];
+
+      let cmdIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeTerminalLoop() {
+        if (!termEl) return;
+        const currentCmd = terminalCommands[cmdIndex];
+
+        if (!isDeleting) {
+          termEl.textContent = currentCmd.substring(0, charIndex + 1);
+          charIndex++;
+
+          if (charIndex === currentCmd.length) {
+            isDeleting = true;
+            setTimeout(typeTerminalLoop, 2800); // Pause on complete line
+            return;
+          }
+          setTimeout(typeTerminalLoop, 45 + Math.random() * 30);
+        } else {
+          termEl.textContent = currentCmd.substring(0, charIndex - 1);
+          charIndex--;
+
+          if (charIndex === 0) {
+            isDeleting = false;
+            cmdIndex = (cmdIndex + 1) % terminalCommands.length;
+            setTimeout(typeTerminalLoop, 400);
+            return;
+          }
+          setTimeout(typeTerminalLoop, 15);
+        }
+      }
+      typeTerminalLoop();
+
+      /* 10. SOCIAL PROOF ANIMATED NUMBER COUNTERS */
+      const counters = document.querySelectorAll('.counter');
+      let countersStarted = false;
+
+      function startCounters() {
+        if (countersStarted) return;
+        countersStarted = true;
+
+        counters.forEach((counter) => {
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const isDecimal = target % 1 !== 0;
+          const duration = 1600;
+          const startTime = performance.now();
+
+          function updateCounter(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out expo curve
+            const easedProgress = 1 - Math.pow(2, -10 * progress);
+            const currentVal = target * easedProgress;
+
+            counter.textContent = isDecimal ? currentVal.toFixed(1) : Math.floor(currentVal);
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = isDecimal ? target.toFixed(1) : target;
+            }
+          }
+          requestAnimationFrame(updateCounter);
+        });
+      }
+
+      // Intersection observer for counters
+      const statsStrip = document.querySelector('.stats-strip');
+      if (statsStrip) {
+        const statsObserver = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            startCounters();
+            statsObserver.disconnect();
+          }
+        }, { threshold: 0.3 });
+        statsObserver.observe(statsStrip);
+      }
+
+      /* 11. PRICING USE-CASE FILTER CHIPS */
+      const filterChips = document.getElementById('filterChips');
+      const chipIndicator = document.getElementById('chipIndicator');
+      const chipBtns = document.querySelectorAll('.chip-btn');
+      const pricingCards = document.querySelectorAll('.pricing-card');
+
+      function positionChipIndicator(activeBtn) {
+        if (!chipIndicator || !activeBtn) return;
+        const rect = activeBtn.getBoundingClientRect();
+        const parentRect = filterChips.getBoundingClientRect();
+        chipIndicator.style.width = `${rect.width}px`;
+        chipIndicator.style.transform = `translateX(${rect.left - parentRect.left - 4}px)`;
+      }
+
+      if (chipBtns.length > 0) {
+        positionChipIndicator(chipBtns[0]);
+
+        chipBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            chipBtns.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            positionChipIndicator(btn);
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            pricingCards.forEach((card) => {
+              const categories = card.getAttribute('data-category') || '';
+              if (filterValue === 'all') {
+                card.classList.remove('highlighted', 'dimmed');
+              } else if (categories.includes(filterValue)) {
+                card.classList.add('highlighted');
+                card.classList.remove('dimmed');
+              } else {
+                card.classList.remove('highlighted');
+                card.classList.add('dimmed');
+              }
+            });
+          });
+        });
+      }
+
+      /* 12. MOBILE PRICING CAROUSEL DOTS SYNC */
+      const pricingGrid = document.getElementById('pricingGrid');
+      const pDots = document.querySelectorAll('.p-dot');
+
+      if (pricingGrid && pDots.length > 0) {
+        pricingGrid.addEventListener('scroll', () => {
+          const scrollLeft = pricingGrid.scrollLeft;
+          const cardWidth = pricingGrid.querySelector('.pricing-card').offsetWidth;
+          const activeIndex = Math.round(scrollLeft / cardWidth);
+
+          pDots.forEach((dot, idx) => {
+            if (idx === activeIndex) dot.classList.add('active');
+            else dot.classList.remove('active');
+          });
+        }, { passive: true });
+      }
+
+      /* 13. FAQ ACCORDION LOGIC */
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item) => {
+        const trigger = item.querySelector('.faq-trigger');
+        const body = item.querySelector('.faq-body');
+
+        trigger.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+
+          // Close all other items
+          faqItems.forEach((other) => {
+            if (other !== item) {
+              other.classList.remove('open');
+              other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+              other.querySelector('.faq-body').style.maxHeight = '0px';
+            }
+          });
+
+          // Toggle current
+          if (!isOpen) {
+            item.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            body.style.maxHeight = `${body.scrollHeight}px`;
+          } else {
+            item.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+            body.style.maxHeight = '0px';
+          }
+        });
+      });
+
+      /* 14. MOBILE MENU DRAWER */
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+
+      window.openMobileDrawer = function() {
+        if (mobileDrawer) {
+          mobileDrawer.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          document.getElementById('mobileBottomDock')?.classList.add('dock-hidden');
+        }
+      };
+
+      window.closeMobileDrawer = function() {
+        if (mobileDrawer) {
+          mobileDrawer.classList.remove('open');
+          document.body.style.overflow = '';
+          document.getElementById('mobileBottomDock')?.classList.remove('dock-hidden');
+        }
+      };
+
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          const isOpen = mobileDrawer.classList.contains('open');
+          if (isOpen) closeMobileDrawer();
+          else openMobileDrawer();
+        });
+      }
+
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', closeMobileDrawer);
+      });
+
+    });
+
+    /* 15. ABOUT LANGUAGE TOGGLE (English / Hindi Crossfade) */
+    function setLanguage(lang) {
+      const enBox = document.getElementById('aboutTextEn');
+      const hiBox = document.getElementById('aboutTextHi');
+      const enBtn = document.getElementById('langEnBtn');
+      const hiBtn = document.getElementById('langHiBtn');
+
+      if (lang === 'hi') {
+        if (enBox) enBox.style.display = 'none';
+        if (hiBox) hiBox.style.display = 'block';
+        if (enBtn) enBtn.classList.remove('active');
+        if (hiBtn) hiBtn.classList.add('active');
+      } else {
+        if (hiBox) hiBox.style.display = 'none';
+        if (enBox) enBox.style.display = 'block';
+        if (hiBtn) hiBtn.classList.remove('active');
+        if (enBtn) enBtn.classList.add('active');
+      }
+    }
+
+    /* 16. TELEGRAM MODAL (With Focus Trap & Accessible Controls) */
+    const tgModal = document.getElementById('tgModal');
+    let previousActiveElement = null;
+
+    function openTgModal() {
+      previousActiveElement = document.activeElement;
+      if (tgModal) {
+        tgModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('mobileBottomDock')?.classList.add('dock-hidden');
+        const closeBtn = document.getElementById('modalCloseBtn');
+        if (closeBtn) closeBtn.focus();
+      }
+    }
+
+    function closeTgModal() {
+      if (tgModal) {
+        tgModal.classList.remove('open');
+        document.body.style.overflow = '';
+        document.getElementById('mobileBottomDock')?.classList.remove('dock-hidden');
+        if (previousActiveElement) previousActiveElement.focus();
+      }
+    }
+
+    // Backdrop click close
+    if (tgModal) {
+      tgModal.addEventListener('click', (e) => {
+        if (e.target === tgModal) closeTgModal();
+      });
+    }
+
+    // ESC key close & Focus Trap
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && tgModal && tgModal.classList.contains('open')) {
+        closeTgModal();
+      }
+
+      // Focus trap inside modal
+      if (e.key === 'Tab' && tgModal && tgModal.classList.contains('open')) {
+        const focusable = tgModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          last.focus();
+          e.preventDefault();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          first.focus();
+          e.preventDefault();
+        }
+      }
+    });
+
+    /* 17. COPY HANDLE FEEDBACK */
+    function copyHandle(text, btnElement) {
+      if (!navigator.clipboard) {
+        const temp = document.createElement('textarea');
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+      } else {
+        navigator.clipboard.writeText(text);
+      }
+
+      const originalText = btnElement.textContent;
+      btnElement.textContent = '✓ Copied';
+      btnElement.classList.add('copied');
+
+      setTimeout(() => {
+        btnElement.textContent = originalText;
+        btnElement.classList.remove('copied');
+      }, 1800);
+    }
+
+    /* 18. BUY BUTTON FEEDBACK (Shows spinner before redirect) */
+    function handleBuyClick(btn) {
+      if (!btn) return;
+      btn.classList.add('loading');
+      setTimeout(() => {
+        window.open('https://forms.gle/oA5aHdAQmcYV62Dp8', '_blank', 'noopener');
+        btn.classList.remove('loading');
+      }, 350);
+    }
+    /* 19. MOBILE PRICING VIEW TOGGLE (Swipe Carousel vs Stacked List) */
+    function setPricingView(mode) {
+      const grid = document.getElementById('pricingGrid');
+      const btnSwipe = document.getElementById('btnToggleSwipe');
+      const btnList = document.getElementById('btnToggleList');
+      const dots = document.getElementById('pricingDots');
+      if (!grid) return;
+      if (mode === 'list') {
+        grid.classList.add('list-view');
+        btnList?.classList.add('active');
+        btnSwipe?.classList.remove('active');
+        if (dots) dots.style.display = 'none';
+      } else {
+        grid.classList.remove('list-view');
+        btnSwipe?.classList.add('active');
+        btnList?.classList.remove('active');
+        if (dots) dots.style.display = 'flex';
+      }
+    }
+
+    /* 20. PRODUCTION-READY SPA ROUTER & INSTANT PAGE TRANSITIONS */
+    const pageCache = new Map();
+
+    // Prefetch an HTML page in background for instant transitions
+    function prefetchPage(url) {
+      if (!url || url.startsWith('http') || url.startsWith('mailto:') || url.startsWith('#')) return;
+      const cleanUrl = url.split('#')[0];
+      if (pageCache.has(cleanUrl)) return;
+      fetch(cleanUrl, { credentials: 'same-origin' })
+        .then(r => r.ok ? r.text() : Promise.reject())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          pageCache.set(cleanUrl, doc);
+        })
+        .catch(() => {});
+    }
+
+    // Update active nav indicators across desktop nav, mobile drawer, and bottom dock
+    function updateActiveNav(targetPath, targetHash) {
+      const normPath = (targetPath || '').toLowerCase().split('/').pop() || 'index.html';
+      const cleanPath = (normPath === '' || normPath === './') ? 'index.html' : normPath;
+
+      // Desktop links
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        if (targetHash && (href.includes(targetHash) || href === targetHash)) {
+          link.classList.add('active');
+        } else if (!targetHash && (href === cleanPath || (cleanPath === 'index.html' && (href === 'index.html' || href === './')))) {
+          link.classList.add('active');
+        }
+      });
+
+      // Mobile drawer links
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.classList.remove('active');
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        if (targetHash && (href.includes(targetHash) || href === targetHash)) {
+          link.classList.add('active');
+        } else if (!targetHash && (href === cleanPath || (cleanPath === 'index.html' && (href === 'index.html' || href === './')))) {
+          link.classList.add('active');
+        }
+      });
+
+      // Mobile bottom dock items
+      document.querySelectorAll('.dock-item').forEach(item => {
+        item.classList.remove('active');
+        const href = (item.getAttribute('href') || '').toLowerCase();
+        if (targetHash && href.includes(targetHash)) {
+          item.classList.add('active');
+        } else if (!targetHash && (href === cleanPath || (cleanPath === 'index.html' && (href === 'index.html' || href === './')))) {
+          item.classList.add('active');
+        }
+      });
+
+      // Morphing pill indicator
+      const activeLink = document.querySelector('.nav-link.active');
+      const navLinksWrap = document.getElementById('navLinksWrap');
+      const navPill = document.getElementById('navPill');
+      if (activeLink && navLinksWrap && navPill) {
+        const rect = activeLink.getBoundingClientRect();
+        const parentRect = navLinksWrap.getBoundingClientRect();
+        navPill.style.width = `${rect.width}px`;
+        navPill.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+        navPill.style.opacity = '1';
+      }
+    }
+
+    // Seamless Navigation Engine
+    async function navigateTo(href, isPushState = true) {
+      if (!href) return;
+      if (typeof closeMobileDrawer === 'function') closeMobileDrawer();
+      if (typeof closeTgModal === 'function') closeTgModal();
+
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetParts = href.split('#');
+      const targetPath = (targetParts[0] || '').split('/').pop() || currentPath;
+      const targetHash = targetParts[1] ? '#' + targetParts[1] : '';
+
+      // Case 1: Same page hash navigation (e.g. #pricing, #faq)
+      if ((targetPath === currentPath || targetPath === '') && targetHash) {
+        const targetEl = document.querySelector(targetHash);
+        if (targetEl) {
+          if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) {
+            lenis.scrollTo(targetEl, { offset: -70 });
+          } else {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          if (isPushState) history.pushState(null, '', href);
+          updateActiveNav(currentPath, targetHash);
+          return;
+        }
+      }
+
+      // Case 2: Clicking current page without hash -> smooth scroll to top
+      if ((targetPath === currentPath || targetPath === '') && !targetHash) {
+        if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) {
+          lenis.scrollTo(0);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        updateActiveNav(currentPath, '');
+        return;
+      }
+
+      // Case 3: Transition to a different HTML page
+      try {
+        let doc = pageCache.get(targetPath);
+        if (!doc) {
+          const res = await fetch(targetPath, { credentials: 'same-origin' });
+          if (!res.ok) throw new Error('Fetch status ' + res.status);
+          const html = await res.text();
+          const parser = new DOMParser();
+          doc = parser.parseFromString(html, 'text/html');
+          pageCache.set(targetPath, doc);
+        }
+
+        const curMain = document.querySelector('main');
+        const newMain = doc.querySelector('main');
+        if (!curMain || !newMain) {
+          window.location.href = href;
+          return;
+        }
+
+        const executeSwap = () => {
+          document.title = doc.title;
+          const newDesc = doc.querySelector('meta[name="description"]');
+          const curDesc = document.querySelector('meta[name="description"]');
+          if (newDesc && curDesc) curDesc.setAttribute('content', newDesc.getAttribute('content'));
+
+          curMain.innerHTML = newMain.innerHTML;
+
+          if (isPushState) history.pushState(null, '', href);
+          updateActiveNav(targetPath, targetHash);
+
+          initPageModules(targetPath);
+          bindInternalLinks();
+
+          if (targetHash) {
+            setTimeout(() => {
+              const el = document.querySelector(targetHash);
+              if (el) {
+                if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) lenis.scrollTo(el, { offset: -70 });
+                else el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 60);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          }
+        };
+
+        if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.startViewTransition(executeSwap);
+        } else {
+          curMain.style.transition = 'opacity 0.14s ease, transform 0.14s ease';
+          curMain.style.opacity = '0';
+          curMain.style.transform = 'translateY(6px)';
+          await new Promise(r => setTimeout(r, 140));
+          executeSwap();
+          curMain.style.opacity = '1';
+          curMain.style.transform = 'translateY(0)';
+        }
+
+      } catch (err) {
+        window.location.href = href;
+      }
+    }
+
+    // Attach click and prefetch listeners to internal links
+    function bindInternalLinks() {
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('mailto:') || link.target === '_blank') return;
+        if (link.hasAttribute('data-router-bound')) return;
+        link.setAttribute('data-router-bound', 'true');
+
+        link.addEventListener('mouseenter', () => prefetchPage(href), { passive: true, once: true });
+        link.addEventListener('touchstart', () => prefetchPage(href), { passive: true, once: true });
+
+        link.addEventListener('click', (e) => {
+          if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
+          e.preventDefault();
+          navigateTo(href, true);
+        });
+      });
+    }
+
+    // Page-specific initializers for swapped content
+    function initPageModules(targetPath) {
+      const path = (targetPath || '').toLowerCase();
+      if (path.includes('live.html')) {
+        initLivePage();
+      } else if (path.includes('locations.html')) {
+        initLocationsPage();
+      } else if (path.includes('about.html')) {
+        initAboutPage();
+      } else {
+        initIndexPage();
+      }
+    }
+
+    function initLivePage() {
+      const barChart = document.getElementById('barChart');
+      const tooltip = document.getElementById('uptimeTooltip');
+      if (barChart && tooltip) {
+        barChart.innerHTML = '';
+        const today = new Date();
+        for (let i = 0; i < 90; i++) {
+          const d = new Date(today);
+          d.setDate(d.getDate() - (89 - i));
+          const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+          const div = document.createElement('div');
+          div.className = 'day-block';
+          div.addEventListener('mouseenter', () => {
+            tooltip.textContent = `${dateStr} • 100% Uptime (0 Incidents)`;
+            const rect = div.getBoundingClientRect();
+            const parentRect = document.getElementById('uptimeBanner')?.getBoundingClientRect() || rect;
+            tooltip.style.left = `${rect.left - parentRect.left + rect.width / 2}px`;
+            tooltip.style.top = `${rect.top - parentRect.top}px`;
+            tooltip.style.opacity = '1';
+          });
+          div.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+          barChart.appendChild(div);
+        }
+      }
+    }
+
+    function runLivePingTest() {
+      const btn = document.getElementById('pingTestBtn');
+      const text = document.getElementById('pingBtnText');
+      if (!btn) return;
+      btn.style.pointerEvents = 'none';
+      btn.classList.add('running');
+      if (text) text.textContent = 'Pinging Clusters...';
+
+      const nodes = [
+        { code: 'de', base: 18 },
+        { code: 'fi', base: 24 },
+        { code: 'in', base: 12 },
+        { code: 'sg', base: 42 },
+        { code: 'us', base: 85 }
+      ];
+
+      nodes.forEach((n, idx) => {
+        setTimeout(() => {
+          const row = document.querySelector(`.node-row[data-code="${n.code}"]`) || document.querySelectorAll('.node-row')[idx];
+          if (row) {
+            const valEl = row.querySelector('.ping-val');
+            if (valEl) {
+              const jitter = Math.floor(Math.random() * 5) - 2;
+              valEl.textContent = `${Math.max(1, n.base + jitter)} ms`;
+              valEl.style.transform = 'scale(1.15)';
+              setTimeout(() => { valEl.style.transform = 'scale(1)'; }, 200);
+            }
+          }
+        }, 150 + idx * 180);
+      });
+
+      setTimeout(() => {
+        btn.classList.remove('running');
+        btn.style.pointerEvents = '';
+        if (text) text.textContent = 'Ping Complete ✓';
+        setTimeout(() => { if (text) text.textContent = 'Run Live Ping Test'; }, 2000);
+      }, 1500);
+    }
+
+    function initLocationsPage() {
+      const brokerTabs = document.getElementById('brokerTabs');
+      const recText = document.getElementById('brokerRecommendation');
+      if (brokerTabs) {
+        const brokerData = {
+          exness: { rec: '★ Recommendation for Exness: <strong>Germany or London</strong> (Est. 1 - 18ms execution latency)', pings: { de: '18 ms', fi: '24 ms', in: '120 ms', sg: '160 ms', us: '85 ms' } },
+          icmarkets: { rec: '★ Recommendation for IC Markets: <strong>New York or London</strong> (Est. 2 - 12ms execution latency)', pings: { de: '28 ms', fi: '32 ms', in: '145 ms', sg: '110 ms', us: '12 ms' } },
+          xm: { rec: '★ Recommendation for XM Global: <strong>London or Germany</strong> (Est. 3 - 22ms execution latency)', pings: { de: '19 ms', fi: '25 ms', in: '115 ms', sg: '140 ms', us: '90 ms' } },
+          crypto: { rec: '★ Recommendation for Binance / Crypto: <strong>Singapore or Tokyo</strong> (Est. 2 - 15ms execution latency)', pings: { de: '95 ms', fi: '110 ms', in: '45 ms', sg: '8 ms', us: '135 ms' } }
+        };
+
+        brokerTabs.querySelectorAll('.broker-chip').forEach(chip => {
+          chip.addEventListener('click', () => {
+            brokerTabs.querySelectorAll('.broker-chip').forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            const broker = chip.getAttribute('data-broker');
+            const data = brokerData[broker];
+            if (data) {
+              if (recText) recText.innerHTML = data.rec;
+              Object.entries(data.pings).forEach(([code, ping]) => {
+                const el = document.getElementById('ping-' + code);
+                if (el) el.textContent = ping;
+              });
+            }
+          });
+        });
+      }
+    }
+
+    function initAboutPage() {
+      // About page interactive controls ready
+    }
+
+    function initIndexPage() {
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item) => {
+        const trigger = item.querySelector('.faq-trigger');
+        const body = item.querySelector('.faq-body');
+        if (!trigger || !body) return;
+        trigger.onclick = () => {
+          const isOpen = item.classList.contains('open');
+          faqItems.forEach((other) => {
+            if (other !== item) {
+              other.classList.remove('open');
+              other.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+              const ob = other.querySelector('.faq-body');
+              if (ob) ob.style.maxHeight = '0px';
+            }
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            body.style.maxHeight = `${body.scrollHeight}px`;
+          } else {
+            item.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+            body.style.maxHeight = '0px';
+          }
+        };
+      });
+
+      // Carousel Dots
+      const pricingGrid = document.getElementById('pricingGrid');
+      const pDots = document.querySelectorAll('.p-dot');
+      if (pricingGrid && pDots.length > 0) {
+        pricingGrid.onscroll = () => {
+          const scrollLeft = pricingGrid.scrollLeft;
+          const firstCard = pricingGrid.querySelector('.pricing-card');
+          if (!firstCard) return;
+          const cardWidth = firstCard.offsetWidth + 14;
+          const activeIndex = Math.min(pDots.length - 1, Math.max(0, Math.round(scrollLeft / cardWidth)));
+          pDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === activeIndex);
+          });
+        };
+      }
+    }
+
+    // Initial binding
+    bindInternalLinks();
+
+    // Browser back / forward support
+    window.addEventListener('popstate', () => {
+      const fullUrl = window.location.pathname.split('/').pop() || 'index.html';
+      const hash = window.location.hash;
+      navigateTo(fullUrl + hash, false);
+    });
+
+    // Handle initial direct hash jump (e.g. index.html#pricing)
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        setTimeout(() => {
+          const el = document.querySelector(window.location.hash);
+          if (el) {
+            if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) lenis.scrollTo(el, { offset: -70 });
+            else el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 150);
+      }
+    });
+  </script>
 </body>
 </html>
-
-<html>
-<head>
-
-<meta name="description" content="Buy Cheap Windows RDP in India. Fast and affordable RDP servers with 2GB, 4GB, 8GB plans from Ravan Cloud.">
-
-<meta name="keywords" content="cheap windows rdp, buy rdp india, cheap rdp server, windows rdp plans">
-
-<meta name="author" content="Ravan Cloud">
-  
-<title>Ravan Cloud - Cheap Windows RDP</title>
-
-<style>
-  
-<body{
-  margin::0:
-  font-family:Arial;
-  backgroud:white;
-}
-
-
-  
-/* HEADER */
-
-header{
-background:black;
-color:white;
-padding:15px;
-text-align:center;
-font-size:24px;
-}
-
-/* PLANS */
-
-.plans{
-padding:20px;
-text-align:center;
-}
-
-.planbox{
-background:black;
-color:white;
-padding:25px;
-margin:20px;
-border-radius:10px;
-}
-
-.price{
-font-size:18px;
-margin:10px;
-}
-
-/* BUTTON */
-
-.btn{
-background:green;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:6px;
-font-size:16px;
-cursor:pointer;
-}
-
-/* POPUP */
-
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-}
-
-.popup-content{
-background:white;
-width:90%;
-max-width:400px;
-margin:120px auto;
-padding:25px;
-border-radius:10px;
-text-align:center;
-}
-
-</div>
-<div style="background:#fff3cd; border:2px solid #f0c36d; padding:20px; 
-border-radius:10px; text-align:center; max-width:800px; margin:30px auto;">
-
-<h3 style="color:black; font-weight:bold;">
-⚠ Important Notice
-</h3>
-
-<p style="color:black; font-weight:bold; font-size:17px;">
-टेलीग्राम पर आप रैम / वीसीपीयू / स्टोरेज से संबंधित बात कर सकते हैं, 
-लेकिन इसके लिए शुल्क भी लग सकता है।
-</p>
-
-<p style="color:black; font-weight:bold; font-size:17px;">
-You can discuss RAM / vCPU / Storage related issues on Telegram, 
-but there may be a fee for this.
-</p>
-
-<a href="https://t.me/alvida_my_love" 
-style="display:inline-block; background:#0088cc; color:white; 
-padding:12px 25px; margin-top:10px; text-decoration:none; 
-border-radius:6px; font-weight:bold;">
-💬 Contact on Telegram
-</a>
-
-</div>
-<!-- POPUP -->
-
-<div id="popupBox" class="popup">
-
-<div class="popup-content">
-
-<h2>🙏 Welcome to Ravan Cloud</h2>
-
-<p>
-Ravan Cloud पर आने के लिए धन्यवाद!  
-हम आपकी सेवा में 24/7 उपस्थित हैं।
-</p>
-
-<p>
-Thank you for visiting Ravan Cloud.  
-Our support team is available 24/7.
-</p>
-
-<a class="tg" href="https://t.me/Ravancloud_bot">
-Telegram Bot
-</a>
-
-<a class="tg" href="https://t.me/alvida_my_love">
-Personal Telegram
-</a>
-
-<br>
-
-<button class="btn" onclick="closePopup()">Close</button>
-
-</div>
-
-</div>
-
-<footer>
-
-All our services are in your best interest.To talk to us you can visit our Telegram 🆔 @Alvida_my_love 
-

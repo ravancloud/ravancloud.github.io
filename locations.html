@@ -1,113 +1,1613 @@
-<style>
-    .locations-section {
-        padding: 60px 20px;
-        text-align: center;
-        background-color: #fff;
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Global Datacenter Locations | Ravan Cloud</title>
+  <meta name="description" content="Explore Ravan Cloud's high-speed global datacenters in Germany, Finland, India, Singapore, and USA. 10 Gbps network uplinks, enterprise NVMe hardware, and DDoS mitigation.">
+  <meta name="keywords" content="VPS locations, Windows RDP Germany, India VPS Mumbai, Finland cloud server, Singapore RDP hosting">
+  <meta name="author" content="Ravan Cloud">
+  <link rel="canonical" href="https://ravancloud.github.io/locations.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Global Server Locations | Ravan Cloud">
+  <meta property="og:description" content="Deploy Windows RDP & Linux VPS in premium Tier-3 datacenters worldwide.">
+  <meta property="og:image" content="https://ravancloud.github.io/IMG_20260316_121023_213.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230E0F0C'/><circle cx='50' cy='50' r='20' fill='%23C6FF3D'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #0E0F0C;
+      --surface: #161814;
+      --surface-elevated: #1E201A;
+      --surface-glass: rgba(22, 24, 20, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.2);
+      --border-accent: rgba(198, 255, 61, 0.35);
+      
+      --text: #F2F1EA;
+      --text-muted: #8C8F85;
+      --text-dim: #54574E;
+      
+      --accent: #C6FF3D;
+      --accent-hover: #D4FF66;
+      --accent-contrast: #0E0F0C;
+      --accent-rgb: 198, 255, 61;
+      
+      --status-green: #C6FF3D;
+      --status-glow: rgba(198, 255, 61, 0.3);
+      --grid-line: rgba(255, 255, 255, 0.032);
+      
+      --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      --ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-transition: cubic-bezier(0.65, 0, 0.35, 1);
+      --duration-micro: 150ms;
+      --duration-ui: 300ms;
+      
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-24: 96px;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
     }
 
-    .locations-section h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        color: #1e0533;
+    [data-theme="light"] {
+      --bg: #F6F5EF;
+      --surface: #FFFFFF;
+      --surface-elevated: #EDECE5;
+      --surface-glass: rgba(255, 255, 255, 0.85);
+      --border: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(0, 0, 0, 0.22);
+      --border-accent: rgba(105, 150, 0, 0.4);
+      --text: #11120F;
+      --text-muted: #64685D;
+      --text-dim: #9FA296;
+      --accent: #6C9E00;
+      --accent-hover: #5B8500;
+      --accent-contrast: #FFFFFF;
+      --accent-rgb: 108, 158, 0;
+      --grid-line: rgba(0, 0, 0, 0.04);
     }
 
-    .locations-section p {
-        color: #666;
-        margin-bottom: 40px;
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--bg); color: var(--text); font-family: var(--font-body);
+      line-height: 1.6; min-height: 100vh; overflow-x: hidden; position: relative;
+      transition: background-color var(--duration-ui) ease, color var(--duration-ui) ease;
     }
 
-    .locations-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        max-width: 1000px;
-        margin: 0 auto;
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; background: none; border: none; cursor: pointer; color: inherit; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .bg-grid-overlay {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(var(--accent-rgb), 0.04) 0%, transparent 70%),
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+      background: var(--accent); z-index: 1000; transition: width 0.05s linear;
+    }
+
+    .container {
+      width: 100%; max-width: 1100px; margin: 0 auto;
+      padding: 0 var(--space-6); position: relative; z-index: 2;
+    }
+
+    /* Custom Cursor */
+    #cursor-dot, #cursor-ring {
+      pointer-events: none; position: fixed; top: 0; left: 0;
+      transform: translate(-50%, -50%); border-radius: 50%;
+      z-index: 9999; opacity: 0;
+      transition: opacity 0.2s ease, width 0.25s var(--ease-entrance), height 0.25s var(--ease-entrance), background 0.25s ease;
+    }
+    #cursor-dot { width: 6px; height: 6px; background: var(--accent); }
+    #cursor-ring {
+      width: 32px; height: 32px; border: 1px solid rgba(var(--accent-rgb), 0.5);
+      background: transparent;
+    }
+    body.cursor-hover #cursor-ring {
+      width: 52px; height: 52px; background: rgba(var(--accent-rgb), 0.08);
+      border-color: var(--accent);
+    }
+    @media (pointer: coarse) or (hover: none) {
+      #cursor-dot, #cursor-ring { display: none !important; }
+    }
+
+    /* Navbar */
+    .header-wrap {
+      position: fixed; top: var(--space-4); left: 0; right: 0;
+      z-index: 100; display: flex; justify-content: center; padding: 0 var(--space-4);
+      transition: transform var(--duration-ui) var(--ease-entrance);
+    }
+    .header-wrap.nav-hidden { transform: translateY(-120%); }
+
+    .navbar {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; max-width: 980px; padding: 8px 14px 8px 16px;
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid var(--border); border-radius: var(--radius-pill);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: background var(--duration-ui) ease, border-color var(--duration-ui) ease;
+    }
+    .header-wrap.scrolled .navbar {
+      background: var(--surface-elevated);
+      border-color: var(--border-hover);
+    }
+
+    .brand {
+      display: flex; align-items: center; gap: var(--space-3);
+      font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem;
+    }
+
+    .brand-logo-img {
+      width: 32px; height: 32px; border-radius: 8px; object-fit: cover;
+      border: 1px solid var(--border); display: block; background: #000;
+    }
+
+    .brand-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--status-green); box-shadow: 0 0 8px var(--status-glow);
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .nav-links-wrap {
+      position: relative; display: flex; align-items: center; gap: 4px;
+    }
+    .nav-pill-indicator {
+      position: absolute; top: 0; left: 0; height: 100%;
+      border-radius: var(--radius-pill);
+      background: rgba(var(--accent-rgb), 0.1);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      pointer-events: none; opacity: 0;
+      transition: all var(--duration-micro) var(--ease-entrance);
+    }
+    .nav-link {
+      padding: 6px 14px; font-size: 0.88rem; font-weight: 500;
+      color: var(--text-muted); border-radius: var(--radius-pill);
+      transition: color var(--duration-micro) ease;
+      position: relative; z-index: 1;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--text); }
+
+    .nav-actions { display: flex; align-items: center; gap: var(--space-2); }
+
+    .theme-toggle {
+      width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; color: var(--text-muted); border: 1px solid var(--border);
+      transition: color 0.15s ease, border-color 0.15s ease, transform 0.4s var(--ease-entrance);
+    }
+    .theme-toggle:hover { color: var(--text); border-color: var(--border-hover); transform: rotate(180deg); }
+    .theme-toggle svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+    /* Button Microinteractions */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: var(--space-2); padding: 9px 18px; font-size: 0.88rem;
+      font-weight: 600; border-radius: var(--radius-pill);
+      position: relative; overflow: hidden;
+      transition: transform var(--duration-micro) var(--ease-entrance),
+                  box-shadow var(--duration-ui) ease,
+                  background var(--duration-micro) ease;
+      white-space: nowrap;
+    }
+    .btn:active { transform: scale(0.97) !important; }
+
+    .btn::after {
+      content: ''; position: absolute; top: -50%; left: -60%;
+      width: 40%; height: 200%;
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: rotate(25deg); opacity: 0;
+      transition: transform 0.6s ease, opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .btn:hover::after {
+      opacity: 1; transform: rotate(25deg) translate(400%, 0);
+    }
+
+    .btn-accent {
+      background: var(--accent); color: var(--accent-contrast);
+      border: 1px solid var(--accent); font-weight: 700;
+    }
+    .btn-accent:hover {
+      background: var(--accent-hover); box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.35);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.04); color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      background: var(--surface-elevated); border-color: var(--border-hover);
+    }
+
+    .mobile-menu-btn {
+      display: none; width: 36px; height: 36px; align-items: center;
+      justify-content: center; border-radius: 8px; border: 1px solid var(--border);
+    }
+    .mobile-menu-btn svg { width: 20px; height: 20px; }
+
+    .mobile-drawer {
+      position: fixed; inset: 0; background: var(--bg);
+      backdrop-filter: blur(24px); z-index: 99;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: var(--space-8); transform: translateY(-100%);
+      opacity: 0; visibility: hidden; transition: all 0.35s ease;
+    }
+    .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+    .mobile-nav-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-6); font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; }
+
+    /* Page Hero */
+    .loc-hero {
+      padding-top: calc(var(--space-24) + var(--space-12));
+      padding-bottom: var(--space-10);
+      text-align: center;
+    }
+
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 4px 14px; border-radius: var(--radius-pill);
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;
+      color: var(--accent); margin-bottom: var(--space-4);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    .page-title {
+      font-family: var(--font-heading); font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 700; letter-spacing: -0.035em; margin-bottom: var(--space-4);
+    }
+    .page-title span { color: var(--accent); }
+
+    .page-subtitle {
+      font-size: 1.05rem; color: var(--text-muted); max-width: 640px;
+      margin: 0 auto var(--space-8);
+    }
+
+    /* Interactive Broker Latency Benchmark Tool */
+    .broker-tool-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8);
+      margin-bottom: var(--space-12); position: relative;
+    }
+    .broker-tool-header {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-4);
+    }
+    .broker-tabs {
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+    .broker-chip {
+      padding: 6px 14px; border-radius: var(--radius-pill);
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      font-size: 0.8rem; font-family: var(--font-mono); font-weight: 600;
+      color: var(--text-muted); transition: all 0.2s ease;
+    }
+    .broker-chip.active {
+      background: var(--accent); color: var(--accent-contrast); font-weight: 700;
+      border-color: var(--accent);
+    }
+
+    /* Locations Grid (3D Tilt & Cursor Spotlight) */
+    .loc-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6); margin-bottom: var(--space-16);
     }
 
     .loc-card {
-        background: #fdfdfd;
-        border: 1.5px solid #eee;
-        border-radius: 15px;
-        padding: 25px;
-        transition: 0.3s;
-        position: relative;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: var(--space-6);
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; transform-style: preserve-3d;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      min-height: 270px;
     }
-
+    .loc-card::before {
+      content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
+      background: radial-gradient(350px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.25), transparent 70%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      pointer-events: none; opacity: 0; transition: opacity 0.3s ease;
+    }
+    .loc-card:hover::before { opacity: 1; }
     .loc-card:hover {
-        border-color: #8e2de2;
-        box-shadow: 0 5px 15px rgba(142, 45, 226, 0.1);
+      border-color: var(--border-hover);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .flag-icon {
-        font-size: 30px;
-        margin-bottom: 15px;
-        display: block;
+    .loc-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: var(--space-4);
+    }
+    .loc-flag { font-size: 2rem; line-height: 1; }
+    .loc-status {
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+      padding: 3px 10px; border-radius: var(--radius-pill);
+      text-transform: uppercase;
+    }
+    .status-online {
+      background: rgba(var(--accent-rgb), 0.1); color: var(--accent);
+      border: 1px solid rgba(var(--accent-rgb), 0.25);
+    }
+    .status-limited {
+      background: rgba(255, 189, 46, 0.1); color: #FFBD2E;
+      border: 1px solid rgba(255, 189, 46, 0.25);
     }
 
     .loc-name {
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: #333;
+      font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .loc-region {
+      font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);
+      margin-bottom: var(--space-4);
     }
 
-    .loc-country {
-        color: #777;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
+    .loc-specs {
+      list-style: none; font-size: 0.85rem; color: var(--text-muted);
+      display: flex; flex-direction: column; gap: 6px;
+      margin-bottom: var(--space-6);
+    }
+    .loc-specs strong { color: var(--text); font-family: var(--font-mono); }
+    .loc-specs .ping-display {
+      color: var(--status-green); font-weight: 700;
     }
 
-    /* Availability Badges */
-    .status {
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 0.8rem;
+    /* Network Standards Banner */
+    .network-specs-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: var(--space-12);
+      margin-bottom: var(--space-16); position: relative;
+    }
+    .net-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6); margin-top: var(--space-8);
+    }
+    .net-item {
+      border-left: 1px solid var(--border); padding-left: var(--space-4);
+      transition: transform 0.2s ease;
+    }
+    .net-item:hover { transform: translateX(3px); }
+    .net-title {
+      font-family: var(--font-mono); font-size: 1.4rem; font-weight: 700;
+      color: var(--accent); margin-bottom: 4px;
+    }
+    .net-desc { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border); padding: var(--space-12) 0 var(--space-8);
+      background: var(--bg); font-size: 0.88rem; color: var(--text-muted);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: var(--space-8); margin-bottom: var(--space-12);
+    }
+    .footer-col-title {
+      font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;
+      color: var(--text); letter-spacing: 0.05em; margin-bottom: var(--space-4);
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .footer-links a:hover { color: var(--text); }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: var(--space-6); border-top: 1px solid var(--border);
+      flex-wrap: wrap; gap: var(--space-4);
+    }
+
+    /* Smooth Page Dissolve Transition */
+    body {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.18s cubic-bezier(0.22, 1, 0.36, 1), transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    body.page-leaving {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+
+    @media (max-width: 900px) {
+      .loc-grid { grid-template-columns: repeat(2, 1fr); }
+      .net-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .header-wrap { top: 8px; padding: 0 10px; }
+      .navbar { padding: 6px 12px; }
+      .nav-links-wrap, .header-cta { display: none; }
+      .mobile-menu-btn { display: flex; width: 38px; height: 38px; }
+      .theme-toggle { width: 38px; height: 38px; }
+      .container { padding: 0 16px; }
+      .loc-hero { padding-top: 84px; padding-bottom: 28px; }
+      .page-title { font-size: clamp(1.85rem, 8vw, 2.35rem); }
+      .loc-grid { grid-template-columns: 1fr; gap: 14px; }
+      .net-grid { grid-template-columns: 1fr; gap: 16px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .broker-tool-card { padding: 20px; }
+      .broker-tabs { width: 100%; }
+      .broker-chip { font-size: 0.75rem; padding: 5px 12px; }
+
+      /* Mobile Bottom Dock */
+      body {
+        padding-bottom: 74px;
+      }
+      .mobile-bottom-dock {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 10px;
+        left: 12px;
+        right: 12px;
+        max-width: 420px;
+        margin: 0 auto;
+        height: 56px;
+        background: rgba(22, 24, 20, 0.92);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border: 1px solid var(--border-hover);
+        border-radius: var(--radius-pill);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
+        z-index: 95;
+        padding: 0 6px;
+        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+      }
+      .mobile-bottom-dock.dock-hidden {
+        transform: translateY(130%);
+        opacity: 0;
+        pointer-events: none;
+      }
+      .dock-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        flex: 1;
+        height: 100%;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
         font-weight: 600;
-        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        padding-top: 2px;
+        transition: color 0.15s ease;
+      }
+      .dock-item svg {
+        width: 18px;
+        height: 18px;
+        transition: stroke 0.15s ease, transform 0.15s ease;
+      }
+      .dock-item:hover, .dock-item.active {
+        color: var(--accent);
+      }
+      .dock-item.active svg {
+        stroke: var(--accent);
+        transform: translateY(-1px);
+      }
+      .dock-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 14px;
+        height: 2px;
+        background: var(--accent);
+        border-radius: 2px;
+        box-shadow: 0 0 6px var(--accent);
+      }
     }
 
-    .available {
-        background: #f3e8ff;
-        color: #8e2de2;
+    .mobile-bottom-dock {
+      display: none;
     }
 
-    .out-of-stock {
-        background: #fee2e2;
-        color: #ef4444;
+    /* Modal Backdrop & Dialog */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
     }
-</style>
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-card {
+      background: var(--surface);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      transform: scale(0.96) translateY(10px);
+      transition: transform 0.25s var(--ease-entrance);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+    .modal-backdrop.open .modal-card {
+      transform: scale(1) translateY(0);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+    .modal-close-btn:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+      background: var(--surface-elevated);
+    }
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+    .modal-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: var(--space-6);
+    }
+    .modal-contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+    .tg-option-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      transition: border-color 0.2s ease;
+    }
+    .tg-option-card:hover {
+      border-color: var(--border-hover);
+    }
+    .tg-info {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .tg-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(36, 161, 222, 0.15);
+      color: #24A1DE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tg-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .tg-handle {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .tg-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .modal-notice {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-4);
+      line-height: 1.5;
+    }
 
-<section class="locations-section">
-    <h2>Global Server Locations</h2>
-    <p>Choose from our premium data centers worldwide for optimal performance</p>
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      #cursor-dot, #cursor-ring { display: none !important; }
+      .loc-card { transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
-    <div class="locations-grid">
-        <div class="loc-card">
-            <span class="flag-icon">🇩🇪</span>
-            <div class="loc-name">Nuremberg</div>
-            <div class="loc-country">Germany</div>
-            <span class="status available">Available</span>
-        </div>
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
 
-        <div class="loc-card">
-            <span class="flag-icon">🇫🇮</span>
-            <div class="loc-name">Helsinki</div>
-            <div class="loc-country">Finland</div>
-            <span class="status available">Available</span>
-        </div>
+  <div class="bg-grid-overlay"></div>
 
-        <div class="loc-card">
-            <span class="flag-icon">🇮🇳</span>
-            <div class="loc-name">Mumbai</div>
-            <div class="loc-country">India</div>
-            <span class="status out-of-stock">Out of Stock</span>
-        </div>
+  <!-- Header -->
+  <header class="header-wrap" id="headerWrap">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="brand">
+        <img src="IMG_20260316_121023_213.jpg" alt="Ravan Cloud" class="brand-logo-img" width="32" height="32" onerror="this.onerror=null; this.src='https://ravancloud.github.io/IMG_20260316_121023_213.jpg';">
+        <span>Ravan Cloud</span>
+        <span class="brand-dot"></span>
+      </a>
 
-        <div class="loc-card">
-            <span class="flag-icon">🇺🇸</span>
-            <div class="loc-name">Hillsboro</div>
-            <div class="loc-country">USA</div>
-            <span class="status out-of-stock">Out of Stock</span>
-        </div>
+      <div class="nav-links-wrap" id="navLinksWrap">
+        <div class="nav-pill-indicator" id="navPill"></div>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#pricing" class="nav-link">Pricing</a>
+        <a href="locations.html" class="nav-link active">Locations</a>
+        <a href="live.html" class="nav-link">Live Status</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle theme">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="index.html#pricing" class="btn btn-accent header-cta magnetic">
+          <span>Get a server</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:28px;">
+      <a href="index.html" class="brand" onclick="closeMobileDrawer()">
+        <img src="IMG_20260316_121023_213.jpg" alt="Ravan Cloud" class="brand-logo-img" width="30" height="30" onerror="this.onerror=null; this.src='https://ravancloud.github.io/IMG_20260316_121023_213.jpg';">
+        <span>Ravan Cloud</span>
+      </a>
+      <button onclick="closeMobileDrawer()" aria-label="Close Menu" style="width:38px; height:38px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--text); background:var(--surface);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
-</section>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Home</a></li>
+      <li><a href="index.html#pricing" class="mobile-nav-link" onclick="closeMobileDrawer()">Pricing & Plans</a></li>
+      <li><a href="locations.html" class="mobile-nav-link active" onclick="closeMobileDrawer()">Datacenter Nodes</a></li>
+      <li><a href="live.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Live Status</a></li>
+      <li><a href="about.html" class="mobile-nav-link" onclick="closeMobileDrawer()">About Us</a></li>
+      <li><a href="index.html#faq" class="mobile-nav-link" onclick="closeMobileDrawer()">FAQ</a></li>
+    </ul>
+    <div style="margin-top: 32px; display:flex; flex-direction:column; gap:12px;">
+      <a href="index.html#pricing" class="btn btn-accent" onclick="closeMobileDrawer()">Get a server →</a>
+      <a href="https://t.me/Ravancloud_bot" target="_blank" rel="noopener" class="btn btn-ghost">Telegram Support</a>
+    </div>
+  </div>
 
+  <main class="container">
+    <section class="loc-hero">
+      <div class="badge-pill">🌐 Global Backbone Infrastructure</div>
+      <h1 class="page-title">Datacenter <span>Locations</span></h1>
+      <p class="page-subtitle">Deploy your Windows RDP and Linux VPS close to your financial brokers, clients, and API targets for minimal latency.</p>
+    </section>
+
+    <!-- Interactive Broker Latency Tool -->
+    <section class="broker-tool-card">
+      <div class="broker-tool-header">
+        <div>
+          <div style="font-weight:700; font-size:1.05rem;">MT4 / MT5 Broker Latency Benchmark</div>
+          <div style="color:var(--text-muted); font-size:0.85rem;">Select your broker to find the lowest-latency server location:</div>
+        </div>
+        <div class="broker-tabs" id="brokerTabs">
+          <button class="broker-chip active" data-broker="exness">Exness (London/CY)</button>
+          <button class="broker-chip" data-broker="icmarkets">IC Markets (NY/LD)</button>
+          <button class="broker-chip" data-broker="xm">XM Global</button>
+          <button class="broker-chip" data-broker="crypto">Binance / Crypto</button>
+        </div>
+      </div>
+      <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent);" id="brokerRecommendation">
+        ★ Recommendation for Exness: <strong>Germany or London</strong> (Est. 1 - 18ms execution latency)
+      </div>
+    </section>
+
+    <!-- 6 Global Locations (3D Tilt & Cursor Spotlight) -->
+    <div class="loc-grid">
+
+      <!-- 1. Nuremberg, Germany -->
+      <article class="loc-card" data-code="de">
+        <div>
+          <div class="loc-header">
+            <span class="loc-flag">🇩🇪</span>
+            <span class="loc-status status-online">Available</span>
+          </div>
+          <h2 class="loc-name">Nuremberg</h2>
+          <div class="loc-region">Germany &bull; Central Europe Hub</div>
+          <ul class="loc-specs">
+            <li>Uplink: <strong>10 Gbps Redundant</strong></li>
+            <li>Broker Ping: <strong class="ping-display" id="ping-de">18 ms</strong></li>
+            <li>DDoS Filtering: <strong>Up to 1 Tbps</strong></li>
+          </ul>
+        </div>
+        <a href="index.html#pricing" class="btn btn-accent magnetic" style="width:100%;">Select Location →</a>
+      </article>
+
+      <!-- 2. Helsinki, Finland -->
+      <article class="loc-card" data-code="fi">
+        <div>
+          <div class="loc-header">
+            <span class="loc-flag">🇫🇮</span>
+            <span class="loc-status status-online">Available</span>
+          </div>
+          <h2 class="loc-name">Helsinki</h2>
+          <div class="loc-region">Finland &bull; Nordic Eco Datacenter</div>
+          <ul class="loc-specs">
+            <li>Uplink: <strong>10 Gbps Port</strong></li>
+            <li>Broker Ping: <strong class="ping-display" id="ping-fi">24 ms</strong></li>
+            <li>Power: <strong>100% Green Redundant</strong></li>
+          </ul>
+        </div>
+        <a href="index.html#pricing" class="btn btn-accent magnetic" style="width:100%;">Select Location →</a>
+      </article>
+
+      <!-- 3. Mumbai, India -->
+      <article class="loc-card" data-code="in">
+        <div>
+          <div class="loc-header">
+            <span class="loc-flag">🇮🇳</span>
+            <span class="loc-status status-online">Available</span>
+          </div>
+          <h2 class="loc-name">Mumbai</h2>
+          <div class="loc-region">India &bull; South Asia Gateway</div>
+          <ul class="loc-specs">
+            <li>Uplink: <strong>1 Gbps Low Latency</strong></li>
+            <li>Broker Ping: <strong class="ping-display" id="ping-in">12 ms (Local)</strong></li>
+            <li>Best For: <strong>NSE / BSE & Local Bots</strong></li>
+          </ul>
+        </div>
+        <a href="index.html#pricing" class="btn btn-accent magnetic" style="width:100%;">Select Location →</a>
+      </article>
+
+      <!-- 4. Singapore -->
+      <article class="loc-card" data-code="sg">
+        <div>
+          <div class="loc-header">
+            <span class="loc-flag">🇸🇬</span>
+            <span class="loc-status status-online">Available</span>
+          </div>
+          <h2 class="loc-name">Singapore</h2>
+          <div class="loc-region">Singapore &bull; Asia-Pacific Core</div>
+          <ul class="loc-specs">
+            <li>Uplink: <strong>10 Gbps Tier-1 Transit</strong></li>
+            <li>Broker Ping: <strong class="ping-display" id="ping-sg">28 ms</strong></li>
+            <li>Best For: <strong>Asian Broker Gateways</strong></li>
+          </ul>
+        </div>
+        <a href="index.html#pricing" class="btn btn-accent magnetic" style="width:100%;">Select Location →</a>
+      </article>
+
+      <!-- 5. Ashburn, USA -->
+      <article class="loc-card" data-code="us">
+        <div>
+          <div class="loc-header">
+            <span class="loc-flag">🇺🇸</span>
+            <span class="loc-status status-online">Available</span>
+          </div>
+          <h2 class="loc-name">Ashburn / Hillsboro</h2>
+          <div class="loc-region">USA &bull; North America Backbone</div>
+          <ul class="loc-specs">
+            <li>Uplink: <strong>10 Gbps Multi-Carrier</strong></li>
+            <li>Broker Ping: <strong class="ping-display" id="ping-us">68 ms</strong></li>
+            <li>Best For: <strong>US Dev & Wall Street APIs</strong></li>
+          </ul>
+        </div>
+        <a href="index.html#pricing" class="btn btn-accent magnetic" style="width:100%;">Select Location →</a>
+      </article>
+
+      <!-- 6. London, UK -->
+      <article class="loc-card" data-code="uk">
+        <div>
+          <div class="loc-header">
+            <span class="loc-flag">🇬🇧</span>
+            <span class="loc-status status-limited">High Demand</span>
+          </div>
+          <h2 class="loc-name">London</h2>
+          <div class="loc-region">UK &bull; LD4 Financial Exchange</div>
+          <ul class="loc-specs">
+            <li>Uplink: <strong>Equinix Direct Cross-Connect</strong></li>
+            <li>Broker Ping: <strong class="ping-display" id="ping-uk">1 - 2 ms</strong></li>
+            <li>Contact: <strong>Request via Telegram</strong></li>
+          </ul>
+        </div>
+        <a href="https://t.me/alvida_my_love" target="_blank" rel="noopener" class="btn btn-ghost magnetic" style="width:100%;">Request Node →</a>
+      </article>
+
+    </div>
+
+    <!-- Network Architecture Standards -->
+    <section class="network-specs-box">
+      <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent); text-transform:uppercase;">Enterprise Backbone</span>
+      <h2 style="font-family:var(--font-heading); font-size:1.8rem; font-weight:700; margin-top:4px;">Built for 24/7 Uninterrupted Throughput</h2>
+      <p style="color:var(--text-muted); font-size:0.95rem; max-width:700px; margin-top:8px;">Every location features redundant A+B utility power feeds, biometric physical access security, and multi-homed BGP routing for instantaneous automatic packet rerouting.</p>
+
+      <div class="net-grid">
+        <div class="net-item">
+          <div class="net-title">10 Gbps</div>
+          <div class="net-desc">High capacity fiber ports per hypervisor rack.</div>
+        </div>
+        <div class="net-item">
+          <div class="net-title">&lt; 15 ms</div>
+          <div class="net-desc">Ultra-low jitter direct routing to major financial brokers.</div>
+        </div>
+        <div class="net-item">
+          <div class="net-title">1 Tbps+</div>
+          <div class="net-desc">Hardware scrubbing centers for L3/L4/L7 DDoS mitigation.</div>
+        </div>
+        <div class="net-item">
+          <div class="net-title">99.9%</div>
+          <div class="net-desc">Uptime reliability target backed by redundant cooling & power.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom:12px;">
+            <img src="IMG_20260316_121023_213.jpg" alt="Ravan Cloud" class="brand-logo-img" width="28" height="28" onerror="this.onerror=null; this.src='https://ravancloud.github.io/IMG_20260316_121023_213.jpg';">
+            <span>Ravan Cloud</span>
+          </a>
+          <p style="font-size:0.85rem; line-height:1.5;">Premium Windows RDP & Linux VPS nodes across Europe, Asia, and North America.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="live.html">Live Status</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#pricing">Pricing Plans</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Get Started</div>
+          <ul class="footer-links">
+            <li><a href="https://forms.gle/oA5aHdAQmcYV62Dp8" target="_blank" rel="noopener">Order Google Form</a></li>
+            <li><a href="https://t.me/Ravancloud_bot" target="_blank" rel="noopener">Support Bot</a></li>
+            <li><a href="https://t.me/alvida_my_love" target="_blank" rel="noopener">Telegram Admin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Ravan Cloud. All rights reserved.</div>
+        <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent);">● Global Backbone Active</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Dock (App-Like 1-Tap Thumb Navigation) -->
+  <nav class="mobile-bottom-dock" id="mobileBottomDock" aria-label="Mobile Navigation">
+    <a href="index.html" class="dock-item" data-nav="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="index.html#pricing" class="dock-item" data-nav="pricing">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      <span>Plans</span>
+    </a>
+    <a href="locations.html" class="dock-item active" data-nav="locations">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+      <span>Nodes</span>
+    </a>
+    <a href="live.html" class="dock-item" data-nav="live">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      <span>Live</span>
+    </a>
+    <a href="javascript:void(0)" class="dock-item" onclick="openTgModal()" aria-label="Open Telegram Support">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>Chat</span>
+    </a>
+  </nav>
+
+  <!-- Telegram Contact Modal -->
+  <div class="modal-backdrop" id="tgModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card" id="tgModalCard">
+      <button class="modal-close-btn" id="modalCloseBtn" onclick="closeTgModal()" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <h3 class="modal-title" id="modalTitle">Connect with Ravan Cloud</h3>
+      <p class="modal-desc">Direct 24/7 assistance for setup, server customizations, and instant renewals.</p>
+
+      <div class="modal-contact-row">
+        <!-- Option 1: Official Bot -->
+        <div class="tg-option-card">
+          <div class="tg-info">
+            <div class="tg-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </div>
+            <div>
+              <div class="tg-title">Support Bot</div>
+              <div class="tg-handle">@Ravancloud_bot</div>
+            </div>
+          </div>
+          <div class="tg-actions">
+            <button class="copy-btn" onclick="copyHandle('@Ravancloud_bot', this)">Copy</button>
+            <a href="https://t.me/Ravancloud_bot" target="_blank" rel="noopener" class="btn btn-accent" style="padding:6px 12px; font-size:0.78rem;">Open</a>
+          </div>
+        </div>
+
+        <!-- Option 2: Owner Personal ID -->
+        <div class="tg-option-card">
+          <div class="tg-info">
+            <div class="tg-icon-badge" style="background:rgba(198,255,61,0.15); color:var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <div>
+              <div class="tg-title">Personal Support</div>
+              <div class="tg-handle">@alvida_my_love</div>
+            </div>
+          </div>
+          <div class="tg-actions">
+            <button class="copy-btn" onclick="copyHandle('@alvida_my_love', this)">Copy</button>
+            <a href="https://t.me/alvida_my_love" target="_blank" rel="noopener" class="btn btn-accent" style="padding:6px 12px; font-size:0.78rem;">Open</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="modal-notice">
+        ℹ <strong>Notice:</strong> You can discuss customized RAM / vCPU / storage requirements on Telegram, but additional resource fees may apply.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* 1. GSAP ScrollTrigger */
+      if (typeof gsap !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from('.badge-pill', { opacity: 0, y: -15, duration: 0.5, ease: 'power2.out', delay: 0.1 });
+        gsap.from('.page-title', { opacity: 0, y: 30, duration: 0.7, ease: 'power3.out', delay: 0.2 });
+        gsap.from('.page-subtitle', { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out', delay: 0.35 });
+        gsap.from('.broker-tool-card', { opacity: 0, y: 25, duration: 0.7, ease: 'power2.out', delay: 0.45 });
+        gsap.from('.loc-card', { opacity: 0, y: 25, stagger: 0.08, duration: 0.55, ease: 'power2.out', delay: 0.5 });
+      }
+
+      /* 2. Scroll Progress & Sticky Header */
+      const headerWrap = document.getElementById('headerWrap');
+      const scrollProgress = document.getElementById('scroll-progress');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currY = window.scrollY;
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0 && scrollProgress) {
+          scrollProgress.style.width = `${(currY / totalHeight) * 100}%`;
+        }
+
+        if (headerWrap) {
+          if (currY > 60) headerWrap.classList.add('scrolled');
+          else headerWrap.classList.remove('scrolled');
+
+          if (currY > 200 && currY > lastScrollY && !headerWrap.classList.contains('nav-hidden')) {
+            headerWrap.classList.add('nav-hidden');
+          } else if (currY < lastScrollY && headerWrap.classList.contains('nav-hidden')) {
+            headerWrap.classList.remove('nav-hidden');
+          }
+        }
+        lastScrollY = currY;
+      }, { passive: true });
+
+      /* 3. Morphing Nav Pill */
+      const navLinksWrap = document.getElementById('navLinksWrap');
+      const navPill = document.getElementById('navPill');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      if (navLinksWrap && navPill) {
+        navLinks.forEach((link) => {
+          link.addEventListener('mouseenter', () => {
+            const rect = link.getBoundingClientRect();
+            const parentRect = navLinksWrap.getBoundingClientRect();
+            navPill.style.width = `${rect.width}px`;
+            navPill.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+            navPill.style.opacity = '1';
+          });
+        });
+        navLinksWrap.addEventListener('mouseleave', () => {
+          navPill.style.opacity = '0';
+        });
+      }
+
+      /* 4. Custom Cursor */
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      if (dot && ring && window.matchMedia('(pointer: fine)').matches) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let visible = false;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          if (!visible) { dot.style.opacity = '1'; ring.style.opacity = '1'; visible = true; }
+          dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+        });
+
+        function renderCursor() {
+          ringX += (mouseX - ringX) * 0.18;
+          ringY += (mouseY - ringY) * 0.18;
+          ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+          requestAnimationFrame(renderCursor);
+        }
+        renderCursor();
+
+        document.querySelectorAll('a, button, .loc-card, .broker-chip, .net-item').forEach((el) => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+      }
+
+      /* 5. 3D Tilt & Cursor Spotlight */
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.querySelectorAll('.loc-card, .broker-tool-card, .network-specs-box').forEach((card) => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mx', `${x}px`);
+            card.style.setProperty('--my', `${y}px`);
+
+            if (card.classList.contains('loc-card')) {
+              const centerX = rect.width / 2;
+              const centerY = rect.height / 2;
+              const rotateX = ((y - centerY) / centerY) * -4;
+              const rotateY = ((x - centerX) / centerX) * 4;
+              card.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-2px)`;
+            }
+          });
+
+          card.addEventListener('mouseleave', () => {
+            if (card.classList.contains('loc-card')) {
+              card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            }
+          });
+        });
+
+        document.querySelectorAll('.magnetic').forEach((btn) => {
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const relX = e.clientX - rect.left - rect.width / 2;
+            const relY = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${relX * 0.22}px, ${relY * 0.22}px)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0px, 0px)';
+          });
+        });
+      }
+
+      /* 6. Theme Toggle with Circular Reveal */
+      const themeBtn = document.getElementById('themeToggleBtn');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', (e) => {
+          const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+          const nxt = cur === 'dark' ? 'light' : 'dark';
+
+          if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const x = e.clientX; const y = e.clientY;
+            const endR = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+            const tr = document.startViewTransition(() => {
+              document.documentElement.setAttribute('data-theme', nxt);
+              localStorage.setItem('ravan_theme', nxt);
+            });
+            tr.ready.then(() => {
+              document.documentElement.animate({
+                clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${endR}px at ${x}px ${y}px)`]
+              }, { duration: 400, easing: 'ease-in-out', pseudoElement: '::view-transition-new(root)' });
+            });
+          } else {
+            document.documentElement.setAttribute('data-theme', nxt);
+            localStorage.setItem('ravan_theme', nxt);
+          }
+        });
+      }
+
+      /* 7. Interactive Broker Benchmark Chips */
+      const brokerChips = document.querySelectorAll('.broker-chip');
+      const recText = document.getElementById('brokerRecommendation');
+      const pingData = {
+        exness: {
+          rec: "★ Recommendation for Exness: <strong>Germany or London</strong> (Est. 1 - 18ms execution latency)",
+          pings: { de: "18 ms", fi: "24 ms", in: "115 ms", sg: "145 ms", us: "82 ms", uk: "1 - 2 ms" }
+        },
+        icmarkets: {
+          rec: "★ Recommendation for IC Markets: <strong>USA (NY4) or London (LD4)</strong> (Est. 1 - 12ms execution latency)",
+          pings: { de: "28 ms", fi: "35 ms", in: "140 ms", sg: "160 ms", us: "12 ms", uk: "1 - 2 ms" }
+        },
+        xm: {
+          rec: "★ Recommendation for XM Global: <strong>Germany or London</strong> (Est. 14 - 20ms execution latency)",
+          pings: { de: "16 ms", fi: "26 ms", in: "125 ms", sg: "155 ms", us: "75 ms", uk: "8 ms" }
+        },
+        crypto: {
+          rec: "★ Recommendation for Binance / Bybit: <strong>Singapore or Tokyo</strong> (Est. 4 - 28ms execution latency)",
+          pings: { de: "95 ms", fi: "110 ms", in: "32 ms", sg: "4 ms", us: "135 ms", uk: "98 ms" }
+        }
+      };
+
+      brokerChips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          brokerChips.forEach((c) => c.classList.remove('active'));
+          chip.classList.add('active');
+          const broker = chip.getAttribute('data-broker');
+          const data = pingData[broker];
+          if (data && recText) {
+            recText.innerHTML = data.rec;
+            Object.keys(data.pings).forEach((code) => {
+              const el = document.getElementById(`ping-${code}`);
+              if (el) el.textContent = data.pings[code];
+            });
+          }
+        });
+      });
+
+      // Mobile Menu
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      function closeMobileDrawer() {
+        if (mobileDrawer) {
+          mobileDrawer.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      }
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+          mobileDrawer.classList.toggle('open');
+          document.body.style.overflow = mobileDrawer.classList.contains('open') ? 'hidden' : '';
+        });
+      }
+      document.querySelectorAll('.mobile-nav-link').forEach((l) => {
+        l.addEventListener('click', closeMobileDrawer);
+      });
+
+    });
+
+    /* Telegram Modal Functions */
+    const tgModal = document.getElementById('tgModal');
+    let previousActiveElement = null;
+
+    function openTgModal() {
+      previousActiveElement = document.activeElement;
+      if (tgModal) {
+        tgModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('mobileBottomDock')?.classList.add('dock-hidden');
+        const closeBtn = document.getElementById('modalCloseBtn');
+        if (closeBtn) closeBtn.focus();
+      }
+    }
+
+    function closeTgModal() {
+      if (tgModal) {
+        tgModal.classList.remove('open');
+        document.body.style.overflow = '';
+        document.getElementById('mobileBottomDock')?.classList.remove('dock-hidden');
+        if (previousActiveElement) previousActiveElement.focus();
+      }
+    }
+
+    if (tgModal) {
+      tgModal.addEventListener('click', (e) => {
+        if (e.target === tgModal) closeTgModal();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && tgModal && tgModal.classList.contains('open')) {
+        closeTgModal();
+      }
+      if (e.key === 'Tab' && tgModal && tgModal.classList.contains('open')) {
+        const focusable = tgModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          last.focus(); e.preventDefault();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          first.focus(); e.preventDefault();
+        }
+      }
+    });
+
+    function copyHandle(text, btn) {
+      if (!navigator.clipboard) {
+        const temp = document.createElement('textarea');
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+      } else {
+        navigator.clipboard.writeText(text);
+      }
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.classList.remove('copied');
+      }, 1500);
+    }
+
+    const savedTheme = localStorage.getItem('ravan_theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    /* Seamless Navigation Engine (SPA Router) */
+    const pageCache = new Map();
+
+    function prefetchPage(url) {
+      if (!url || url.startsWith('http') || url.startsWith('mailto:') || url.startsWith('#')) return;
+      const cleanUrl = url.split('#')[0];
+      if (pageCache.has(cleanUrl)) return;
+      fetch(cleanUrl, { credentials: 'same-origin' })
+        .then(r => r.ok ? r.text() : Promise.reject())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          pageCache.set(cleanUrl, doc);
+        })
+        .catch(() => {});
+    }
+
+    function updateActiveNav(targetPath, targetHash) {
+      const normPath = (targetPath || '').toLowerCase().split('/').pop() || 'index.html';
+      const cleanPath = (normPath === '' || normPath === './') ? 'index.html' : normPath;
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        if (targetHash && (href.includes(targetHash) || href === targetHash)) {
+          link.classList.add('active');
+        } else if (!targetHash && (href === cleanPath || (cleanPath === 'index.html' && (href === 'index.html' || href === './')))) {
+          link.classList.add('active');
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.classList.remove('active');
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        if (targetHash && (href.includes(targetHash) || href === targetHash)) {
+          link.classList.add('active');
+        } else if (!targetHash && (href === cleanPath || (cleanPath === 'index.html' && (href === 'index.html' || href === './')))) {
+          link.classList.add('active');
+        }
+      });
+
+      document.querySelectorAll('.dock-item').forEach(item => {
+        item.classList.remove('active');
+        const href = (item.getAttribute('href') || '').toLowerCase();
+        if (targetHash && href.includes(targetHash)) {
+          item.classList.add('active');
+        } else if (!targetHash && (href === cleanPath || (cleanPath === 'index.html' && (href === 'index.html' || href === './')))) {
+          item.classList.add('active');
+        }
+      });
+
+      const activeLink = document.querySelector('.nav-link.active');
+      const navLinksWrap = document.getElementById('navLinksWrap');
+      const navPill = document.getElementById('navPill');
+      if (activeLink && navLinksWrap && navPill) {
+        const rect = activeLink.getBoundingClientRect();
+        const parentRect = navLinksWrap.getBoundingClientRect();
+        navPill.style.width = `${rect.width}px`;
+        navPill.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+        navPill.style.opacity = '1';
+      }
+    }
+
+    async function navigateTo(href, isPushState = true) {
+      if (!href) return;
+      if (typeof closeMobileDrawer === 'function') closeMobileDrawer();
+      if (typeof closeTgModal === 'function') closeTgModal();
+
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetParts = href.split('#');
+      const targetPath = (targetParts[0] || '').split('/').pop() || currentPath;
+      const targetHash = targetParts[1] ? '#' + targetParts[1] : '';
+
+      if ((targetPath === currentPath || targetPath === '') && targetHash) {
+        const targetEl = document.querySelector(targetHash);
+        if (targetEl) {
+          if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) {
+            lenis.scrollTo(targetEl, { offset: -70 });
+          } else {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          if (isPushState) history.pushState(null, '', href);
+          updateActiveNav(currentPath, targetHash);
+          return;
+        }
+      }
+
+      if ((targetPath === currentPath || targetPath === '') && !targetHash) {
+        if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) {
+          lenis.scrollTo(0);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        updateActiveNav(currentPath, '');
+        return;
+      }
+
+      try {
+        let doc = pageCache.get(targetPath);
+        if (!doc) {
+          const res = await fetch(targetPath, { credentials: 'same-origin' });
+          if (!res.ok) throw new Error('Fetch status ' + res.status);
+          const html = await res.text();
+          const parser = new DOMParser();
+          doc = parser.parseFromString(html, 'text/html');
+          pageCache.set(targetPath, doc);
+        }
+
+        const curMain = document.querySelector('main');
+        const newMain = doc.querySelector('main');
+        if (!curMain || !newMain) {
+          window.location.href = href;
+          return;
+        }
+
+        const executeSwap = () => {
+          document.title = doc.title;
+          const newDesc = doc.querySelector('meta[name="description"]');
+          const curDesc = document.querySelector('meta[name="description"]');
+          if (newDesc && curDesc) curDesc.setAttribute('content', newDesc.getAttribute('content'));
+
+          curMain.innerHTML = newMain.innerHTML;
+
+          if (isPushState) history.pushState(null, '', href);
+          updateActiveNav(targetPath, targetHash);
+
+          initPageModules(targetPath);
+          bindInternalLinks();
+
+          if (targetHash) {
+            setTimeout(() => {
+              const el = document.querySelector(targetHash);
+              if (el) {
+                if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) lenis.scrollTo(el, { offset: -70 });
+                else el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 60);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          }
+        };
+
+        if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.startViewTransition(executeSwap);
+        } else {
+          curMain.style.transition = 'opacity 0.14s ease, transform 0.14s ease';
+          curMain.style.opacity = '0';
+          curMain.style.transform = 'translateY(6px)';
+          await new Promise(r => setTimeout(r, 140));
+          executeSwap();
+          curMain.style.opacity = '1';
+          curMain.style.transform = 'translateY(0)';
+        }
+      } catch (err) {
+        window.location.href = href;
+      }
+    }
+
+    function bindInternalLinks() {
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('mailto:') || link.target === '_blank') return;
+        if (link.hasAttribute('data-router-bound')) return;
+        link.setAttribute('data-router-bound', 'true');
+
+        link.addEventListener('mouseenter', () => prefetchPage(href), { passive: true, once: true });
+        link.addEventListener('touchstart', () => prefetchPage(href), { passive: true, once: true });
+
+        link.addEventListener('click', (e) => {
+          if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
+          e.preventDefault();
+          navigateTo(href, true);
+        });
+      });
+    }
+
+    function initPageModules(targetPath) {
+      const path = (targetPath || '').toLowerCase();
+      if (path.includes('live.html')) {
+        initLivePage();
+      } else if (path.includes('locations.html')) {
+        initLocationsPage();
+      } else if (path.includes('about.html')) {
+        initAboutPage();
+      } else {
+        initIndexPage();
+      }
+    }
+
+    function initLivePage() {
+      const barChart = document.getElementById('barChart');
+      const tooltip = document.getElementById('uptimeTooltip');
+      if (barChart && tooltip) {
+        barChart.innerHTML = '';
+        const today = new Date();
+        for (let i = 0; i < 90; i++) {
+          const d = new Date(today);
+          d.setDate(d.getDate() - (89 - i));
+          const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+          const div = document.createElement('div');
+          div.className = 'day-block';
+          div.addEventListener('mouseenter', () => {
+            tooltip.textContent = `${dateStr} • 100% Uptime (0 Incidents)`;
+            const rect = div.getBoundingClientRect();
+            const parentRect = document.getElementById('uptimeBanner')?.getBoundingClientRect() || rect;
+            tooltip.style.left = `${rect.left - parentRect.left + rect.width / 2}px`;
+            tooltip.style.top = `${rect.top - parentRect.top}px`;
+            tooltip.style.opacity = '1';
+          });
+          div.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+          barChart.appendChild(div);
+        }
+      }
+    }
+
+    function initLocationsPage() {
+      const brokerTabs = document.getElementById('brokerTabs');
+      const recText = document.getElementById('brokerRecommendation');
+      if (brokerTabs) {
+        const pingData = {
+          exness: {
+            rec: "★ Recommendation for Exness: <strong>Germany or London</strong> (Est. 1 - 18ms execution latency)",
+            pings: { de: "18 ms", fi: "24 ms", in: "115 ms", sg: "145 ms", us: "82 ms", uk: "1 - 2 ms" }
+          },
+          icmarkets: {
+            rec: "★ Recommendation for IC Markets: <strong>USA (NY4) or London (LD4)</strong> (Est. 1 - 12ms execution latency)",
+            pings: { de: "28 ms", fi: "35 ms", in: "140 ms", sg: "160 ms", us: "12 ms", uk: "1 - 2 ms" }
+          },
+          xm: {
+            rec: "★ Recommendation for XM Global: <strong>Germany or London</strong> (Est. 14 - 20ms execution latency)",
+            pings: { de: "16 ms", fi: "26 ms", in: "125 ms", sg: "155 ms", us: "75 ms", uk: "8 ms" }
+          },
+          crypto: {
+            rec: "★ Recommendation for Binance / Bybit: <strong>Singapore or Tokyo</strong> (Est. 4 - 28ms execution latency)",
+            pings: { de: "95 ms", fi: "110 ms", in: "32 ms", sg: "4 ms", us: "135 ms", uk: "98 ms" }
+          }
+        };
+
+        brokerTabs.querySelectorAll('.broker-chip').forEach(chip => {
+          chip.addEventListener('click', () => {
+            brokerTabs.querySelectorAll('.broker-chip').forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            const broker = chip.getAttribute('data-broker');
+            const data = pingData[broker];
+            if (data && recText) {
+              recText.innerHTML = data.rec;
+              Object.keys(data.pings).forEach(code => {
+                const el = document.getElementById(`ping-${code}`);
+                if (el) el.textContent = data.pings[code];
+              });
+            }
+          });
+        });
+      }
+    }
+
+    function initAboutPage() {}
+
+    function initIndexPage() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item) => {
+        const trigger = item.querySelector('.faq-trigger');
+        const body = item.querySelector('.faq-body');
+        if (!trigger || !body) return;
+        trigger.onclick = () => {
+          const isOpen = item.classList.contains('open');
+          faqItems.forEach((other) => {
+            if (other !== item) {
+              other.classList.remove('open');
+              other.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+              const ob = other.querySelector('.faq-body');
+              if (ob) ob.style.maxHeight = '0px';
+            }
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            body.style.maxHeight = `${body.scrollHeight}px`;
+          } else {
+            item.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+            body.style.maxHeight = '0px';
+          }
+        };
+      });
+    }
+
+    // Initial binding
+    bindInternalLinks();
+
+    // Browser back / forward support
+    window.addEventListener('popstate', () => {
+      const fullUrl = window.location.pathname.split('/').pop() || 'locations.html';
+      const hash = window.location.hash;
+      navigateTo(fullUrl + hash, false);
+    });
+
+    // Handle initial direct hash jump
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        setTimeout(() => {
+          const el = document.querySelector(window.location.hash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    });
+  </script>
+</body>
+</html>
