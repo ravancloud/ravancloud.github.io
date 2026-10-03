@@ -3938,20 +3938,30 @@
       document.body.classList.remove('page-leaving');
     });
 
-    // Handle initial direct hash jump (e.g. index.html#pricing)
-    window.addEventListener('load', () => {
+    // Handle initial direct hash jump (e.g. index.html#pricing, index.html#faq)
+    function handleHashJump(immediate = true) {
       if (window.location.hash) {
-        setTimeout(() => {
-          const el = document.querySelector(window.location.hash);
-          if (el) {
-            if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) lenis.scrollTo(el, { offset: -70 });
-            else el.scrollIntoView({ behavior: 'smooth' });
+        const hash = window.location.hash;
+        const el = document.querySelector(hash);
+        if (el) {
+          if (typeof lenis !== 'undefined' && lenis && lenis.scrollTo) {
+            lenis.scrollTo(el, { offset: -70, immediate });
+          } else {
+            el.scrollIntoView({ behavior: immediate ? 'auto' : 'smooth' });
           }
-        }, 120);
+          updateActiveNav('index.html', hash);
+        }
+      } else {
+        updateActiveNav('index.html', '');
       }
-    });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => setTimeout(() => handleHashJump(true), 50));
+    window.addEventListener('load', () => setTimeout(() => handleHashJump(true), 100));
+    window.addEventListener('hashchange', () => handleHashJump(false));
 
     bindInternalLinks();
+    handleHashJump(true);
   </script>
 </body>
 </html>

@@ -1467,19 +1467,21 @@
     });
 
     // Handle initial direct hash jump
-    window.addEventListener('load', () => {
+    function handleHashJump() {
       if (window.location.hash) {
-        setTimeout(() => {
-          const el = document.querySelector(window.location.hash);
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 120);
+        const el = document.querySelector(window.location.hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
-    });
+    }
+    window.addEventListener('DOMContentLoaded', () => setTimeout(handleHashJump, 60));
+    window.addEventListener('load', () => setTimeout(handleHashJump, 120));
+    window.addEventListener('hashchange', handleHashJump);
 
     // Initialize on page load
     initLocationsPage();
     bindInternalLinks();
     updateActiveNav('locations.html', '');
+    handleHashJump();
   </script>
 </body>
 </html>
